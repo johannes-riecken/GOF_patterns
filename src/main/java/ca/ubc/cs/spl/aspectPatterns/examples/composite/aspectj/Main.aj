@@ -86,11 +86,11 @@ import java.util.Enumeration;
         indent();
         System.out.println(comp);
         indent +=4;                
-        for (Enumeration enum = 
+        for (Enumeration en = 
         	FileSystemComposition.aspectOf().getAllChildren(comp); 
-        	enum.hasMoreElements();) {
+        	en.hasMoreElements();) {
             	printStructure(
-            		(FileSystemComposition.Component) enum.nextElement());
+            		(FileSystemComposition.Component) en.nextElement());
         }
         indent -= 4;
     }

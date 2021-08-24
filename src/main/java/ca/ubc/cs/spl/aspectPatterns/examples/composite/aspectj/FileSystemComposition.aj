@@ -152,7 +152,7 @@ public aspect FileSystemComposition extends CompositeProtocol {
      */
 
     public int Directory.subSum() {     
-        Enumeration enum = FileSystemComposition.aspectOf().recurseFunction(
+        Enumeration en = FileSystemComposition.aspectOf().recurseFunction(
           this, new FunctionVisitor() { 
             public Object doFunction(Component c) { 
                 return new Integer(c.subSum()); 
@@ -160,8 +160,8 @@ public aspect FileSystemComposition extends CompositeProtocol {
         }); 
         
         int sum = 0;
-        while (enum.hasMoreElements()) {
-            sum += ((Integer) enum.nextElement()).intValue();
+        while (en.hasMoreElements()) {
+            sum += ((Integer) en.nextElement()).intValue();
         }
         return sum;
     }

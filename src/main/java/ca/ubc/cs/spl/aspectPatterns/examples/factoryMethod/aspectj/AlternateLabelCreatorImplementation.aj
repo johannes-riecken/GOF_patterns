@@ -55,7 +55,7 @@ public aspect AlternateLabelCreatorImplementation {
 	 */
 	
 	JComponent around(): labelCreation() {
-		JLabel label = proceed();
+		JLabel label = (JLabel) proceed();
 		label.setText("This is an alternate JLabel");
 		return label;
 	}

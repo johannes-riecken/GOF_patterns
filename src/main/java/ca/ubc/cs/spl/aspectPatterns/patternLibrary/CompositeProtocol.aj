@@ -155,8 +155,8 @@ public abstract aspect CompositeProtocol {
      */
 
     public void recurseOperation(Component c, Visitor v) {                    // This implements the logic that Composites forward 
-        for (Enumeration enum = getAllChildren(c); enum.hasMoreElements(); ) {  // method calls to their children
-            Component child = (Component) enum.nextElement();
+        for (Enumeration en = getAllChildren(c); en.hasMoreElements(); ) {  // method calls to their children
+            Component child = (Component) en.nextElement();
             v.doOperation(child);
         }
     }
@@ -199,8 +199,8 @@ public abstract aspect CompositeProtocol {
 
     public Enumeration recurseFunction(Component c, FunctionVisitor fv) {
         Vector results = new Vector();
-        for (Enumeration enum = getAllChildren(c); enum.hasMoreElements(); ) {  // method calls to their children
-            Component child = (Component) enum.nextElement();
+        for (Enumeration en = getAllChildren(c); en.hasMoreElements(); ) {  // method calls to their children
+            Component child = (Component) en.nextElement();
             results.add(fv.doFunction(child));
         }
         return results.elements();
