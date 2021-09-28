@@ -38,20 +38,20 @@ public interface ChangeSubject {
      * 
      * @param o the <i>Observer</i> to add
      */
-     
-    public void addObserver(ChangeObserver o);
+
+    void addObserver(ChangeObserver o);
 
     /**
      * Detaches an <i>Observer</i> from this <i>Subject</i>.
      * 
      * @param o the <i>Observer</i> to remove
      */
-     
-    public void removeObserver(ChangeObserver o);
+
+    void removeObserver(ChangeObserver o);
 
     /**
      * Notifies all <i>Observer</i>s.
      */
-   
-    public void notifyObservers();
+
+    void notifyObservers();
 }

@@ -58,7 +58,7 @@ public abstract aspect CommandProtocol {
      * stores the mapping between CommandInvokers and Commands
      */
     
-    private WeakHashMap mappingInvokerToCommand = new WeakHashMap();
+    private final WeakHashMap mappingInvokerToCommand = new WeakHashMap();
     
     /**
      * Sets a new command for an invoker
@@ -105,7 +105,7 @@ public abstract aspect CommandProtocol {
      * stores the mapping between Coammnds and Receivers
      */
     
-    private WeakHashMap mappingCommandToReceiver = new WeakHashMap();
+    private final WeakHashMap mappingCommandToReceiver = new WeakHashMap();
     
     /**
      * Sets a new receiver for a command

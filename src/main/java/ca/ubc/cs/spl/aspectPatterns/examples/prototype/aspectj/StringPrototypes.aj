@@ -56,7 +56,7 @@ public aspect StringPrototypes extends PrototypeProtocol {
 
     protected Object createCloneFor(Prototype object) {
         if (object instanceof StringPrototypeB) {
-            return new StringPrototypeB(((StringPrototypeB)object).toString());
+            return new StringPrototypeB(object.toString());
         } else {
             return null;
         }

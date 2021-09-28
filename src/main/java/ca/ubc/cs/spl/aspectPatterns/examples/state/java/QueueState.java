@@ -42,9 +42,9 @@ public interface QueueState {
      * on demand)
      * @param arg the object to be inserted into the queue
      * @return true if insertion was successful, false otherwise.
-     */ 
-	
-	public boolean insert(QueueContext context, Object arg);
+     */
+
+    boolean insert(QueueContext context, Object arg);
 
     /**
      * Returns the first item in the queue
@@ -52,9 +52,9 @@ public interface QueueState {
      * @param context the <i>Context</i> for this design pattern (for update 
      * on demand)
      * @return the first item in the queue
-     */ 
+     */
 
-	public Object  getFirst(QueueContext context);	
+    Object  getFirst(QueueContext context);
 
     /**
      * Tries to remove an object from the queue. Returns true if successful,
@@ -63,8 +63,8 @@ public interface QueueState {
      * @param context the <i>Context</i> for this design pattern (for update 
      * on demand)
      * @return true if deletion was successful, false otherwise.
-     */ 
+     */
 
-	public boolean removeFirst(QueueContext context);	 
+    boolean removeFirst(QueueContext context);
 
 }

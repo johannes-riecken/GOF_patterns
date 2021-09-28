@@ -38,6 +38,6 @@ public interface Output {
      * @param s the string to be printed.
      */
 
-	public void print(String s);
+    void print(String s);
 }
 

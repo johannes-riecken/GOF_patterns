@@ -66,10 +66,10 @@ public class Main {
      * calling button.
      */ 
  
-	public static void main(String[] args) {;
+	public static void main(String[] args) {
 
-	    
-		frame.addWindowListener(new WindowAdapter() {
+
+        frame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {System.exit(0);}
 		});
 		    

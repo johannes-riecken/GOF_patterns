@@ -83,7 +83,7 @@ public abstract aspect ChainOfResponsibilityProtocol {
      * is stored.
      */
 	
-	private WeakHashMap successors = new WeakHashMap();
+	private final WeakHashMap successors = new WeakHashMap();
 	
     
     /**

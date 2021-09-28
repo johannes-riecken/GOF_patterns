@@ -75,7 +75,7 @@ public abstract aspect CompositeProtocol {
      * stores the mapping between components and their children
      */    
 
-    private WeakHashMap perComponentChildren = new WeakHashMap();
+    private final WeakHashMap perComponentChildren = new WeakHashMap();
 
     /** 
      * Returns a vector of the children of the argument component
@@ -142,8 +142,8 @@ public abstract aspect CompositeProtocol {
          *
          * @param c the component to perform the operation on
          */
-    
-        public void doOperation(Component c);
+
+        void doOperation(Component c);
     }
 
     /** 
@@ -183,8 +183,8 @@ public abstract aspect CompositeProtocol {
          *
          * @param c the component to perform the operation on
          */
- 
-        public Object doFunction(Component c);
+
+        Object doFunction(Component c);
     }
     
     /** 

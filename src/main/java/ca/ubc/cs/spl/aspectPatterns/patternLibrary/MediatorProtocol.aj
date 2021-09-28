@@ -83,7 +83,7 @@ public abstract aspect MediatorProtocol {
      * is stored.
      */
     
-	private WeakHashMap mappingColleagueToMediator = new WeakHashMap();
+	private final WeakHashMap mappingColleagueToMediator = new WeakHashMap();
 
 
     /**

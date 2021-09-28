@@ -37,7 +37,7 @@ public class Screen {
      * the individual name of this screen object
      */
 
-    private String name;
+    private final String name;
     
     /**
      * creates a new <code>Screen</code> object with the provided name.

@@ -54,7 +54,7 @@ public abstract aspect SingletonProtocol {
 	 * stores the <i>Singleton</i> instances
 	 */
 	
-    private Hashtable singletons = new Hashtable(); 
+    private final Hashtable singletons = new Hashtable();
     
     /**
      * Defines the <i>Singleton</i> role. It is realized as <code>public

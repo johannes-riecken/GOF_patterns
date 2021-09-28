@@ -40,6 +40,6 @@ public interface GUIMediator {
      *
      * @param colleague the changing colleage
      */
-    
-	public void colleagueChanged(GUIColleague colleague);
+
+    void colleagueChanged(GUIColleague colleague);
 }

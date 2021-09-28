@@ -44,7 +44,7 @@ public interface DecoratedStringGenerator {
      * @return the prepared string
      */
 
-	public String prepare  (String s);
+    String prepare(String s);
 
     /**
      * Filters a string. 
@@ -53,7 +53,7 @@ public interface DecoratedStringGenerator {
      * @return the filtered string
      */
 
-	public String filter   (String s);
+    String filter(String s);
 
     /**
      * Finalizes a string. This is the last step in the template method.
@@ -62,7 +62,7 @@ public interface DecoratedStringGenerator {
      * @returns the finalized string
      */
 
-	public String finalize (String s);
+    String finalize(String s);
 }
 	
 		

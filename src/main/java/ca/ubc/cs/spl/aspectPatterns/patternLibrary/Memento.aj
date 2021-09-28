@@ -38,8 +38,8 @@ public interface Memento {
 	 * 
 	 * @param state the state to store
 	 */
-    
-    public void setState(Object state);
+
+    void setState(Object state);
 
 	/**
 	 * Returns the state of this <i>Memento</i> give the passed originator.
@@ -47,5 +47,5 @@ public interface Memento {
 	 * @return the state stored by this <i>Memento</i>
 	 */
 
-    public Object getState();         
+    Object getState();
 }

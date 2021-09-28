@@ -37,7 +37,7 @@ import ca.ubc.cs.spl.aspectPatterns.patternLibrary.CommandReceiver;
 
 public class ButtonCommand implements Command { 
 
-    private Printer printer = new Printer();
+    private final Printer printer = new Printer();
 	
     /**
      * Implements a sample command. This one prints a short message to 

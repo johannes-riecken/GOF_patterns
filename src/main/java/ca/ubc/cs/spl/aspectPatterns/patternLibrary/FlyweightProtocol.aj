@@ -43,15 +43,15 @@ public abstract aspect FlyweightProtocol {
      * stores the existing <i>Flyweight</i> by key
      */
 
-	private Hashtable flyweights = new Hashtable();
+	private final Hashtable flyweights = new Hashtable();
 
     /** 
      * defines the <i>Flyweight</i> role.
      */
 
-	protected interface Flyweight{};
-	
-    /**
+	protected interface Flyweight{}
+
+	/**
      * Creates a <i>Flyweight</i> for a given key. This method is called by
      * <code>getFlyweight(Object)</code> if the flyweight does not already
      * exist.

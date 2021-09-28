@@ -40,14 +40,14 @@ public class Screen implements ChangeSubject, ChangeObserver {
      * stores the <i>Observer</i>s for this screen (<i>Subject</i>)
      */
          
-    private HashSet observers;
+    private final HashSet observers;
 
     
     /**
      * the individual name of this screen object
      */
 
-    private String name;
+    private final String name;
     
     /**
      * creates a new <code>Screen</code> object with the provided name.
@@ -116,7 +116,7 @@ public class Screen implements ChangeSubject, ChangeObserver {
     public void refresh(ChangeSubject s) { 
     	String subjectTypeName = s.getClass().getName();
     	subjectTypeName = subjectTypeName.substring(
-    		subjectTypeName.lastIndexOf(".")+1, subjectTypeName.length());
+    		subjectTypeName.lastIndexOf(".")+1);
         display("update received from a "+subjectTypeName+" object");
     }
         

@@ -43,7 +43,7 @@ public aspect RequestDelegation extends ProxyProtocol {
     
     declare parents: OutputImplementation implements Subject;
     
-    private AlternateOutputImplementation alternateSubject = 
+    private final AlternateOutputImplementation alternateSubject =
     	new AlternateOutputImplementation();
 
     /**

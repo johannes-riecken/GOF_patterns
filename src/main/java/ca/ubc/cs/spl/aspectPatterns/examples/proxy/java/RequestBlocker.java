@@ -37,7 +37,7 @@ public class RequestBlocker implements OutputSubject {
      * a reference to the <i>Subject</i> (used to forward requests to)
      */
      
-	private OutputSubject realSubject; 
+	private final OutputSubject realSubject;
 		
     /**
      * Creates a new <code>RequestBlocker</code> with the given 

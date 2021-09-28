@@ -39,8 +39,8 @@ public interface SimpleList {
      *
      * @return the number of elements in the list
      */
-     
-	public int count(); 
+
+    int count();
 	
 	/**
 	 * Appends an object to the list
@@ -48,8 +48,8 @@ public interface SimpleList {
 	 * @param o the object to append
 	 * @return true if successful, false otherwise
 	 */
-	 
-	public boolean append(Object o);
+
+    boolean append(Object o);
 
 	/**
 	 * Removes an object from the list
@@ -57,8 +57,8 @@ public interface SimpleList {
 	 * @param o the object to remove
 	 * @return true if successful, false otherwise
 	 */
-	 
-	public boolean remove(Object o); 
+
+    boolean remove(Object o);
 
 	/**
 	 * Returns an object from the list
@@ -66,7 +66,7 @@ public interface SimpleList {
 	 * @param index the position of the object
 	 * @return the object at position index
 	 */
-	 
-	public Object get(int index);
+
+    Object get(int index);
 }	
 	

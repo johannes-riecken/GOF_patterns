@@ -35,6 +35,6 @@ public interface Command {
     /**
      * Executes the command.
      */
-      
-	public void executeCommand();
+
+    void executeCommand();
 }

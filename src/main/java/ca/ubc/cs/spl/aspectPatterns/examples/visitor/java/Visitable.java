@@ -37,7 +37,7 @@ public interface Visitable {
      *
      * @param visitor the NodeVisitor that is to be accepted.
      */
-     
-	public void accept(BinaryTreeVisitor visitor);
+
+    void accept(BinaryTreeVisitor visitor);
 }
 	

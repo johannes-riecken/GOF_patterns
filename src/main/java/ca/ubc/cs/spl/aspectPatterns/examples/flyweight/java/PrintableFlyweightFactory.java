@@ -41,7 +41,7 @@ public class PrintableFlyweightFactory {
      * stores the existing flyweights by character they represent
      */
 
-	private Hashtable printables = new Hashtable();
+	private final Hashtable printables = new Hashtable();
 
     /**
      * Returns the flyweight representing the argument character.

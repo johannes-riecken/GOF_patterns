@@ -72,7 +72,7 @@ public abstract class GUIComponentCreator {
      * entirely overlap with existing frames.
      */
      
-    private static Point lastFrameLocation = new Point(0, 0);
+    private static final Point lastFrameLocation = new Point(0, 0);
 
     /** 
      * Creates a <code>JFrame</code>, puts the <code>JComponent</code> that

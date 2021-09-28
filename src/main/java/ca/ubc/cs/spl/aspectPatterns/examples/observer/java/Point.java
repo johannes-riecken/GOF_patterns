@@ -40,7 +40,7 @@ public class Point implements ChangeSubject {
      * stores the <i>Observer</i>s for this point (<i>Subject</i>)
      */
          
-    private HashSet observers;
+    private final HashSet observers;
 
     /**
      * the point's x-coordinate

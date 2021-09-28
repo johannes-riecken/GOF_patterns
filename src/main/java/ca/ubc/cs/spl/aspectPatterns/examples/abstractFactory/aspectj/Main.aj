@@ -79,13 +79,13 @@ public class Main
      * a concrete factory that creates regular GUI components
      */
      
-	private static ComponentFactory factory1 = new RegularFactory();
+	private static final ComponentFactory factory1 = new RegularFactory();
 	
     /**
      * a concrete factory that creates framed GUI components
      */
      
-	private static ComponentFactory factory2 = new FramedFactory();
+	private static final ComponentFactory factory2 = new FramedFactory();
 
     /**
      * stores the currently selected factory

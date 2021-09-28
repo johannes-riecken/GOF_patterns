@@ -40,7 +40,7 @@ public class WhitespaceFlyweight implements PrintableFlyweight {
      * The character this flyweight represents
      */
      
-	private char c;
+	private final char c;
 	
     /** 
      * Creates a new flyweight and sets it to represent a particular 

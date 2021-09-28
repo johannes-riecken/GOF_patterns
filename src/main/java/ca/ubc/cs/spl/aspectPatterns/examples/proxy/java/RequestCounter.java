@@ -37,7 +37,7 @@ public class RequestCounter implements OutputSubject {
      * a reference to the <i>Subject</i> (used to forward requests to)
      */
      
-	private OutputSubject realSubject; 
+	private final OutputSubject realSubject;
 	
 	/**
 	 * An internal counter for the number of calls to <code>

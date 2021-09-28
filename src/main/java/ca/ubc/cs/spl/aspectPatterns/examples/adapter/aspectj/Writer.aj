@@ -40,6 +40,6 @@ public interface Writer {
      * @param s the string to print
      * @see PrinterAdapter 
      */
-     
-	public void write(String s);
+
+    void write(String s);
 }

@@ -47,7 +47,7 @@ public abstract class Screen {
      * stores the actual <i>Implementor</i> to use 
      */
 
-    private ScreenImplementation implementor;  
+    private final ScreenImplementation implementor;
     
     /**
      * Creates a new <code>Screen</code> object given an <i>Implementor</i>

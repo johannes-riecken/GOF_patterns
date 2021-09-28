@@ -39,6 +39,6 @@ public interface GUIColleague {
      *
      * @param mediator the new mediator
      */
-    
-	public void setMediator(GUIMediator mediator);
+
+    void setMediator(GUIMediator mediator);
 }

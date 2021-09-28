@@ -39,6 +39,6 @@ public interface PrintableFlyweight {
 	 *
 	 * @param uppercase whether the character is to be printed as uppercase
 	 */
-      
-  	public void print(boolean uppercase);
+
+    void print(boolean uppercase);
 }

@@ -95,7 +95,7 @@ public class Main {
      * <LI> s4's message should trigger it's observer s5 again.
      */ 
 
-    public static void main(String argv[]) {
+    public static void main(String[] argv) {
 	
     	Point p = new Point(5, 5, Color.blue);
     	

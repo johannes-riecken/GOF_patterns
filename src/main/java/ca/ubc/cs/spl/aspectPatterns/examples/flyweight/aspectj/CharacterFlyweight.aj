@@ -37,7 +37,7 @@ public class CharacterFlyweight implements PrintableFlyweight {
      * The character this <i>ConcreteFlyweight</i> represents
      */
      
-	private char c;
+	private final char c;
 	
 
     /** 

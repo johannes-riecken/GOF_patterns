@@ -51,7 +51,7 @@ public interface GUIComponentCreator {
      * @returns the created product
      */
 
-    public JComponent createComponent(); 
+    JComponent createComponent();
     
     /**
      * Another factory method to create a title that explains the created
@@ -59,8 +59,8 @@ public interface GUIComponentCreator {
      *
      * @returns the title for the GUI frame
      */
-     
-    public String getTitle(); 
+
+    String getTitle();
 }		
 
     

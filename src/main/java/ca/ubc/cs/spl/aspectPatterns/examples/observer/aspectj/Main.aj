@@ -71,7 +71,7 @@ public class Main {
      * </OL>
      */ 
 
-    public static void main(String argv[]) {
+    public static void main(String[] argv) {
 	
     	Point p = new Point(5, 5, Color.blue);
     	

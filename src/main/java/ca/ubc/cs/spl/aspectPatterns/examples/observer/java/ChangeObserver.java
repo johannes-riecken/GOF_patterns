@@ -38,6 +38,6 @@ public interface ChangeObserver {
      *
      * @param s the <i>Subject</i> triggering the update
      */
-     
-    public void refresh(ChangeSubject s);
+
+    void refresh(ChangeSubject s);
 }

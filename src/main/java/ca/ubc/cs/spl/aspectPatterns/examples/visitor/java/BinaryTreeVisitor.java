@@ -38,22 +38,22 @@ public interface BinaryTreeVisitor {
      *
      * @param node the node to visit
      */
-     
-	public void visitNode(Visitable node); 
+
+    void visitNode(Visitable node);
 
     /**
      * Visits a leaf, which is a terminal tree node.
      *
      * @param node the leaf
      */
-     
-	public void visitLeaf(Visitable node);
+
+    void visitLeaf(Visitable node);
 	
 	/** 
 	 * Returns the result of the visitor's operation
 	 *
 	 * @return a string describing the result of this visitor's operation.
 	 */
-	  
-	public String report();
+
+    String report();
 }

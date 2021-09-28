@@ -80,8 +80,8 @@ public abstract aspect VisitorProtocol {
 	     *
 	     * @param node the regular node to visit
 	     */
-	     
-		public void visitNode(VisitableNode node);
+
+        void visitNode(VisitableNode node);
 
 	    /**
 	     * Defines a method signature for visiting leaf nodes.
@@ -89,7 +89,7 @@ public abstract aspect VisitorProtocol {
 	     * @param node the leaf node to visit
 	     */
 
-		public void visitLeaf(VisitableNode node);
+        void visitLeaf(VisitableNode node);
 
 	    /**
 	     * Defines a method signature for returning the visitor's results
@@ -97,7 +97,7 @@ public abstract aspect VisitorProtocol {
 	     * @param node a string containig the visitor's results
 	     */
 
-		public String report();
+        String report();
 	}
 	
     /**

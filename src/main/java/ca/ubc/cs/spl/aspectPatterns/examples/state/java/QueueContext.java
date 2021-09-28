@@ -38,6 +38,6 @@ public interface QueueContext {
      *
      * @param state the new state for the context object.
      */
-     
-	public void setState(QueueState state);
+
+    void setState(QueueState state);
 }

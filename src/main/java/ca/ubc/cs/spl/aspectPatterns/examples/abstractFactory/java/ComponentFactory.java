@@ -41,16 +41,16 @@ public interface ComponentFactory {
      *
      * @return the factory-specific <code>JLabel</code>
      */
-     
-	public JLabel createLabel(); 
+
+    JLabel createLabel();
 
     /**
      * Creates factory-specific <code>JButton</code> products. 
      *
      * @return the factory-specific <code>JButton</code>
      */
-     
-	public JButton createButton(String label); 
+
+    JButton createButton(String label);
 
 
     /** 	
@@ -58,6 +58,6 @@ public interface ComponentFactory {
      *
      * @return the name of the factory
      */
-     	  
-	public String getName();
+
+    String getName();
 }

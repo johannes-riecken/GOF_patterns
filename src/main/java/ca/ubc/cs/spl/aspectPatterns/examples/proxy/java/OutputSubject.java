@@ -38,8 +38,8 @@ public interface OutputSubject {
      *
      * @param s the string to print
      */
-     
-	public void safeRequest(String s);
+
+    void safeRequest(String s);
 
     /**
      * A type of <i>request(..)</i>.
@@ -47,7 +47,7 @@ public interface OutputSubject {
      * @param s the string to print
      */
 
-	public void regularRequest(String s);
+    void regularRequest(String s);
 	
 	/**
      * A type of <i>request(..)</i>.
@@ -55,6 +55,6 @@ public interface OutputSubject {
 	 * @param s the string to print
 	 */
 
-	public void unsafeRequest(String s);
+    void unsafeRequest(String s);
 
 }
