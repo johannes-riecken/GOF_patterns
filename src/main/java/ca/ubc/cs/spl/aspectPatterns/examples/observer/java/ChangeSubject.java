@@ -15,27 +15,27 @@ package ca.ubc.cs.spl.aspectPatterns.examples.observer.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
- * Declares methods to attach and detach <i>Observer<i>s to/from 
+ * Declares methods to attach and detach <i>Observer<i>s to/from
  * <i>Subject</i>s, and the <code>notifyObservers()</code> method.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.11, 04/01/04
  */
-  
+
 public interface ChangeSubject {
-    
+
     /**
      * Attaches an <i>Observer</i> to this <i>Subject</i>.
-     * 
+     *
      * @param o the <i>Observer</i> to add
      */
 
@@ -43,7 +43,7 @@ public interface ChangeSubject {
 
     /**
      * Detaches an <i>Observer</i> from this <i>Subject</i>.
-     * 
+     *
      * @param o the <i>Observer</i> to remove
      */
 

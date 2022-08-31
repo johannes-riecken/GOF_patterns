@@ -15,17 +15,17 @@ package ca.ubc.cs.spl.aspectPatterns.examples.chainOfResponsibility.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
-  
+
 import javax.swing.*;
 
-/** 
- * Represents a regular GUI panel modified to play its role in the 
+/**
+ * Represents a regular GUI panel modified to play its role in the
  * <i>Chain of Responisiblity</i> pattern, i.e. to handle requests and/or
  * forward them to its successor in the chain.
  *
@@ -37,7 +37,7 @@ import javax.swing.*;
  *
  */
 
-public class Panel extends JPanel implements ClickHandler {  
+public class Panel extends JPanel implements ClickHandler {
 
     /**
      * the successor in the chain of responsibility
@@ -45,25 +45,25 @@ public class Panel extends JPanel implements ClickHandler {
 
 	protected ClickHandler successor;
 
-    /** 
-     * Creates a <code>Panel</code> with a given successor. 
+    /**
+     * Creates a <code>Panel</code> with a given successor.
      *
      * @param successor The successor in the chain of responsibility
-     */	 
-     
+     */
+
  	public Panel(ClickHandler successor) {
 		super();
 		this.successor = successor;
 	}
-	
 
-    /** 
+
+    /**
      * Implements the method to handle requests as defined by the
      * <code>ClickHandler</code> interface. The request is only handled here.
      * if the CTRL key was pressed.
-     * 
+     *
      * @see ClickHandler
-     */	 
+     */
 
 	public void handleClick(Click click) {
 		System.out.println("Panel is asked to handle the request...");
@@ -75,7 +75,6 @@ public class Panel extends JPanel implements ClickHandler {
 			} else {
 				successor.handleClick(click);
 			}
-		} 
+		}
 	}
 }
-		

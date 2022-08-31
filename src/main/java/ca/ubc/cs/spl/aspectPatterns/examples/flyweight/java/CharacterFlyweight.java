@@ -15,20 +15,20 @@ package ca.ubc.cs.spl.aspectPatterns.examples.flyweight.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
  * A <i>ConcreteFlyweight</i> storing a single regular character
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/11/04
- * 
+ *
  * @see PrintableFlyweightFactory
  */
 
@@ -37,28 +37,28 @@ public class CharacterFlyweight implements PrintableFlyweight {
     /**
      * The character this <i>ConcreteFlyweight</i> represents
      */
-     
-	private final char c;
-	
 
-    /** 
-     * Creates a new CharacterFlyweight and sets it to represent a 
+	private final char c;
+
+
+    /**
+     * Creates a new CharacterFlyweight and sets it to represent a
      * particular character
-     * 
+     *
      * @param c the character to represent
      */
-     
+
 	public CharacterFlyweight(char c) {
 		this.c = c;
 	}
-	
-    /** 
+
+    /**
      * Prints the stored character.
      *
      * @param uppercase whether the character should be printed in
      * uppercase
-     */ 
-     
+     */
+
 	public void print(boolean uppercase) {
 		System.out.print(uppercase ? Character.toUpperCase(c) : c);
 	}

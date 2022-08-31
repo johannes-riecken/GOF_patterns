@@ -15,11 +15,11 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
@@ -30,8 +30,8 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  * @version 1.1, 02/17/04
  */
 
-public interface Visitable { 
-    
+public interface Visitable {
+
     /**
      * Accepts a <i>Visitor</i>.
      *
@@ -40,4 +40,4 @@ public interface Visitable {
 
     void accept(BinaryTreeVisitor visitor);
 }
-	
+

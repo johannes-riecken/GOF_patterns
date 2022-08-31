@@ -15,15 +15,15 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Implements a <i>ConcreteVisitor</i> that collects the sum of all leaf 
+ * Implements a <i>ConcreteVisitor</i> that collects the sum of all leaf
  * values in the tree.
  *
  * @author  Jan Hannemann
@@ -32,42 +32,42 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  */
 
 public class SummationVisitor implements BinaryTreeVisitor {
-    
+
     /**
      * the colleced sum of leaf values
      */
-    
+
 	protected int sum = 0;
-	 
+
     /**
      * Visits a non-terminal binary tree node.
      *
      * @param node the regular node
      */
-     
+
 	public void visitNode(Visitable node) {
-		BinaryTreeNode rnode = (BinaryTreeNode) node; 
+		BinaryTreeNode rnode = (BinaryTreeNode) node;
 		rnode.left.accept(this);
 		rnode.right.accept(this);
 	}
-		
+
     /**
      * Visits a terminal tree node.
      *
      * @param node the leaf
      */
-     
+
 	public void visitLeaf(Visitable node) {
 		BinaryTreeLeaf leaf = (BinaryTreeLeaf) node;
 		sum += leaf.getValue();
 	}
-	
-	/** 
+
+	/**
 	 * Returns the result of the visitor's operation
 	 *
 	 * @return a string representation of the sum of leaf values
 	 */
-	  
+
 	public String report() {
 		return ">>> SummationVisitor collected a sum of: "+sum;
 	}

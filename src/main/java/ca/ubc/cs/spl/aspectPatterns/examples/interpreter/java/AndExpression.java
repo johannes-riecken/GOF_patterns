@@ -15,15 +15,15 @@ package ca.ubc.cs.spl.aspectPatterns.examples.interpreter.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Implements AND expressions for booleans. This is a concrete boolean 
+ * Implements AND expressions for booleans. This is a concrete boolean
  * <i>NonterminalExpression</i>
  *
  * @author  Jan Hannemann
@@ -36,39 +36,39 @@ public class AndExpression implements BooleanExpression {
     /**
      * stores the first part of this AND <i>Expression</i>
      */
-     
+
 	protected BooleanExpression expression1;
 
     /**
      * stores the second part of this AND <i>Expression</i>
      */
 
-	protected BooleanExpression expression2; 
+	protected BooleanExpression expression2;
 
-    /** 
+    /**
      * Creates a new AND <i>Expression</i> with the given parts
      *
      * @param expression1 the first <i>Expression</i>
      * @param expression1 the second <i>Expression</i>
-     */	                    
-     
+     */
+
 	public AndExpression(BooleanExpression op1, BooleanExpression op2) {
 		this.expression1 = op1;
 		this.expression2 = op2;
 	}
-	
+
     /**
-     * Evaluates this <i>Expression</i> in the given 
+     * Evaluates this <i>Expression</i> in the given
      * <code>VariableContext</code>
      *
      * @param c the <i>Context</i> to evaluate the <i>Expression</i> in
      * @return the boolean value of this AND <i>Expression</i>
      */
- 
+
  	public boolean evaluate(VariableContext c) {
-		return (expression1.evaluate(c) && expression2.evaluate(c)); 
+		return (expression1.evaluate(c) && expression2.evaluate(c));
 	}
-	
+
     /**
      * Replaces a variable with an <i>Expression</i>
      *
@@ -80,13 +80,13 @@ public class AndExpression implements BooleanExpression {
 	public BooleanExpression replace(String name, BooleanExpression exp) {
 		return new AndExpression(expression1.replace(name, exp), expression2.replace(name,exp));
 	}
-		
+
     /**
      * Copies this <i>Expression</i>
      *
      * @returns the copied <i>Expression</i>
      */
-     
+
 	public BooleanExpression copy() {
 		return new AndExpression(expression1.copy(), expression2.copy());
 	}

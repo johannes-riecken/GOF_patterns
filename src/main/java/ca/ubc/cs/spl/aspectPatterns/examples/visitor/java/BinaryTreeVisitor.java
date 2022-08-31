@@ -15,11 +15,11 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
@@ -30,9 +30,9 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  * @author  Gregor Kiczales
  * @version 1.1, 02/17/04
  */
- 
-public interface BinaryTreeVisitor { 
-    
+
+public interface BinaryTreeVisitor {
+
     /**
      * Visits a non-terminal binary tree node.
      *
@@ -48,8 +48,8 @@ public interface BinaryTreeVisitor {
      */
 
     void visitLeaf(Visitable node);
-	
-	/** 
+
+	/**
 	 * Returns the result of the visitor's operation
 	 *
 	 * @return a string describing the result of this visitor's operation.

@@ -15,13 +15,13 @@ package ca.ubc.cs.spl.aspectPatterns.examples.composite.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
  * Defines the <i>Component</i> interface for the composite design pattern.<p>
  * The implementation is anologuous to the one presented in GoF. Contemporary
@@ -33,13 +33,13 @@ package ca.ubc.cs.spl.aspectPatterns.examples.composite.java;
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/06/04
- * 
- * @see Directory 
+ *
+ * @see Directory
  * @see File
  */
-  
-public interface FileSystemComponent { 
-    
+
+public interface FileSystemComponent {
+
     /**
      * Adds a child to the component
      *
@@ -71,10 +71,10 @@ public interface FileSystemComponent {
      */
 
     int getChildCount();
-	
+
 	/**
 	 * Returns the size of this FileSystemComponent
-	 * 
+	 *
 	 * @return the size of the component (on disk)
 	 */
     int getSize();

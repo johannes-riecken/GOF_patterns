@@ -15,19 +15,19 @@ package ca.ubc.cs.spl.aspectPatterns.examples.command.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /**
- * Implements a simple extension of JButton that supplies its own 
+ * Implements a simple extension of JButton that supplies its own
  * ActionListener and calls its own <code>clicked()</code> method
  * whenever the button is pressed. This method calls the <code>
  * executeCommand()</code> method on the button's associated <i>Command</i>
@@ -44,9 +44,9 @@ public class Button extends JButton {
     /**
      * the command object associated with this button
      */
-     	
+
 	protected Command command;
-	
+
     /**
      * Creates a new button with the provided label
      *
@@ -58,23 +58,23 @@ public class Button extends JButton {
 		this.setActionCommand(label);
 		this.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					clicked(); 
+					clicked();
 				}
-			}); 
+			});
 	}
 
     /**
-     * Calls <code>ececuteCommand()</code> on the associated 
-     * command object. This method gets called whenever the 
+     * Calls <code>ececuteCommand()</code> on the associated
+     * command object. This method gets called whenever the
      * button is pressed.
      */
-	
+
 	public void clicked() {
 		if (command != null) {
 			command.executeCommand();
 		}
 	}
-	
+
     /**
      * Sets the associated command object for this button
      *
@@ -83,5 +83,5 @@ public class Button extends JButton {
 
 	public void setCommand(Command command)	{
 		this.command = command;
-	}  
+	}
 }

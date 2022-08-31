@@ -15,45 +15,45 @@ package ca.ubc.cs.spl.aspectPatterns.examples.strategy.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
  * Sorts an int array with a provided sorting strategy.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/17/04
- * 
+ *
  * @see LinearSort
  * @see BubbleSort
  */
 
-public class Sorter { 
-    
+public class Sorter {
+
     /**
      * Shows the original (unsorted) array, sorts it and shows the new
      * (sorted) array.
-     * 
+     *
      * @param sort the sorting strategy
      * @param numbers the array of int to sort
      */
 
 	public Sorter(SortingStrategy sort, int[] numbers)	{
 		System.out.println("\nPreparing sort...");
-		System.out.println("original: "+show(numbers)); 
+		System.out.println("original: "+show(numbers));
 		sort.sort(numbers);
-		System.out.println("sorted:   "+show(numbers));  
+		System.out.println("sorted:   "+show(numbers));
 		System.out.println("Done sorting.");
 	}
 
 	/**
 	 * Returns the content of the int array in a string
-	 * 
+	 *
 	 * @param numbers the int array to display
 	 * @returns a string with all the ints from the array
 	 */
@@ -63,7 +63,7 @@ public class Sorter {
 		for (int i=0; i<numbers.length; i++)
 		{
 			out += (numbers[i] + " ");
-		}  
+		}
 		return out;
 	}
 }

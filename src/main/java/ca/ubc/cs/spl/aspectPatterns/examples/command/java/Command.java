@@ -15,15 +15,15 @@ package ca.ubc.cs.spl.aspectPatterns.examples.command.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
- * Defines the interface for <i>Command</i> objects. 
+ * Defines the interface for <i>Command</i> objects.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
@@ -31,7 +31,7 @@ package ca.ubc.cs.spl.aspectPatterns.examples.command.java;
  */
 
 public interface Command {
-    
+
     /**
      * Executes the command.
      */

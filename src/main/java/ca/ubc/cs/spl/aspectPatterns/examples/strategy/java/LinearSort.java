@@ -15,13 +15,13 @@ package ca.ubc.cs.spl.aspectPatterns.examples.strategy.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
  * Implements the linear sort sorting strategy for int arrays.
  *
@@ -31,10 +31,10 @@ package ca.ubc.cs.spl.aspectPatterns.examples.strategy.java;
  */
 
 public class LinearSort implements SortingStrategy{
-    
+
     /**
      * Helper method that exchanges two values in an int array
-     * 
+     *
      * @param numbers the int array
      * @param pos1 the position of the first element
      * @param pos2 the position of the second element
@@ -49,17 +49,17 @@ public class LinearSort implements SortingStrategy{
 
     /**
      * Sorts an int array
-     * 
+     *
      * @param numbers the int array to sort
      */
 
 	public void sort(int[] numbers) {
 		System.out.print("Sorting by LinearSort...");
-		int lowest  = 0;  
-		
+		int lowest  = 0;
+
 		for (int start = 0; start < numbers.length; start ++) {
 			lowest = start;
-			
+
 			for (int current = start; current < numbers.length; current ++) {
 				if (numbers[current] < numbers[lowest]) {
 					lowest = current;

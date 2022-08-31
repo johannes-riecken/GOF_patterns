@@ -15,41 +15,41 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Implements the driver for the Visitor design pattern example.<p> 
+ * Implements the driver for the Visitor design pattern example.<p>
  *
- * Intent: <i>Represents an operation to be performed on the elements of an 
+ * Intent: <i>Represents an operation to be performed on the elements of an
  * object structure. Visitor lets you define a new operation without changing
  * the classes of the elements on which it operates</i><p>
  *
- * Participating classes are <code>SummationVisitor</code> and 
- * <code>TraversalVisitor</code> as <i>ConcreteVisitor</i>s, implementing the 
+ * Participating classes are <code>SummationVisitor</code> and
+ * <code>TraversalVisitor</code> as <i>ConcreteVisitor</i>s, implementing the
  * <code>BinaryTreeVisitor</code> interface. <BR>
- * 
- * <code>BinaryTreeNode</code> and <code>BinaryTreeLeaf</code> are 
+ *
+ * <code>BinaryTreeNode</code> and <code>BinaryTreeLeaf</code> are
  * <i>ConcreteElement</i>s, implementing the <code>Visitable</code> interface.
  * <p>
  *
- * In this example, a binary tree is built that has 
- * int values as leafs. <code>SummationVisitor</code> is a <i>Visitor</i> 
- * that collects the sum of the leaf values (should be 6). 
- * 
- * TraversalVisitor is a visitor that 
+ * In this example, a binary tree is built that has
+ * int values as leafs. <code>SummationVisitor</code> is a <i>Visitor</i>
+ * that collects the sum of the leaf values (should be 6).
+ *
+ * TraversalVisitor is a visitor that
  * collects a description of the tree like {{1,2},3}
  *
  * <p><i>This is the Java version.</i><p>
  *
  * Note that <UL>
- * <LI> Every visitor (even the interface) has to know of each possible element 
- *      type in the object structure. 
- * <LI> Nodes need to know of the visitor interface; they have to implement the 
+ * <LI> Every visitor (even the interface) has to know of each possible element
+ *      type in the object structure.
+ * <LI> Nodes need to know of the visitor interface; they have to implement the
  *      accept(NodeVisitor) method.
  * </UL>
  *
@@ -58,47 +58,47 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  * @version 1.1, 02/17/04
  */
 
-public class Main { 
-	
+public class Main {
+
     /**
-     * Implements the driver for the Visitor design pattern example.<p> 
+     * Implements the driver for the Visitor design pattern example.<p>
      *
      * @param args the command-line parameters, unused
      */
 
 
-	public static void main(String[] args) { 
-	    
+	public static void main(String[] args) {
+
 	    System.out.println("Building the tree (1): leaves");
-		
+
 		BinaryTreeLeaf one   = new BinaryTreeLeaf(1);
 		BinaryTreeLeaf two   = new BinaryTreeLeaf(2);
 		BinaryTreeLeaf three = new BinaryTreeLeaf(3);
-		
+
 	    System.out.println("Building the tree (1): regular nodes");
-		
+
 		BinaryTreeNode regN = new BinaryTreeNode(one, two);
 		BinaryTreeNode root = new BinaryTreeNode(regN, three);
-		
+
         System.out.println("The tree now looks like this: ");
         System.out.println("         regN                 ");
         System.out.println("        /    \\               ");
         System.out.println("    regN      3               ");
         System.out.println("   /    \\                    ");
         System.out.println("  1      2                    ");
-		            
+
         System.out.println("Visitor 1: SumVisitor, collects the sum of leaf");
         System.out.println("values. Result should be 6.");
-				            
-		SummationVisitor sumVisitor = new SummationVisitor();  
+
+		SummationVisitor sumVisitor = new SummationVisitor();
 		root.accept(sumVisitor);
-		System.out.println(sumVisitor.report());  
-		
+		System.out.println(sumVisitor.report());
+
         System.out.println("Visitor 2: TraversalVisitor, collects a tree");
         System.out.println("representation. Result should be {{1,2},3}.");
-		
-		TraversalVisitor traversalVisitor = new TraversalVisitor();  
+
+		TraversalVisitor traversalVisitor = new TraversalVisitor();
 		root.accept(traversalVisitor);
-		System.out.println(traversalVisitor.report());  
+		System.out.println(traversalVisitor.report());
 	}
 }

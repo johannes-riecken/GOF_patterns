@@ -15,13 +15,13 @@ package ca.ubc.cs.spl.aspectPatterns.examples.strategy.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
  * Declares the interface for sorting strategies
  *

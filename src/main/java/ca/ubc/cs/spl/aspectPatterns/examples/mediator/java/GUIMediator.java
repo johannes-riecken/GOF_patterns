@@ -15,27 +15,27 @@ package ca.ubc.cs.spl.aspectPatterns.examples.mediator.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
  * This is the <i>Mediator</i> interface. It defines a method for dealing
- * with changes in <i>Colleague</i>s that require updates. 
+ * with changes in <i>Colleague</i>s that require updates.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/12/04
  */
- 
+
 public interface GUIMediator {
-    
+
     /**
-     * Defines the method signature for notifying <i>Mediator</i>s of changes 
-     * to <i>Colleague</i>s. This method is called by colleagues who 
+     * Defines the method signature for notifying <i>Mediator</i>s of changes
+     * to <i>Colleague</i>s. This method is called by colleagues who
      * pass themselves as an argument (push model).
      *
      * @param colleague the changing colleage

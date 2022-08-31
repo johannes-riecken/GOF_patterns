@@ -15,16 +15,16 @@ package ca.ubc.cs.spl.aspectPatterns.examples.chainOfResponsibility.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
-/** 
+
+/**
  * Defines the interface for letting <i>ConcreteHandlers</i> handle a request
- * (here: a button click). 
+ * (here: a button click).
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
@@ -35,4 +35,3 @@ package ca.ubc.cs.spl.aspectPatterns.examples.chainOfResponsibility.java;
 public interface ClickHandler {
 	void handleClick(Click click);
 }
-	

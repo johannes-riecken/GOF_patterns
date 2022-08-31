@@ -15,11 +15,11 @@ package ca.ubc.cs.spl.aspectPatterns.examples.interpreter.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
@@ -31,7 +31,7 @@ package ca.ubc.cs.spl.aspectPatterns.examples.interpreter.java;
  */
 
 public interface BooleanExpression {
-    
+
     /**
      * Evaluates this <i>Expression</i> in the given <i>VariableContext</i>
      *

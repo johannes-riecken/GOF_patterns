@@ -15,13 +15,13 @@ package ca.ubc.cs.spl.aspectPatterns.examples.observer.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
  * Declares the method used to update <i>Observer<i>s.
  *
@@ -29,9 +29,9 @@ package ca.ubc.cs.spl.aspectPatterns.examples.observer.java;
  * @author  Gregor Kiczales
  * @version 1.11, 04/01/04
  */
-  
+
 public interface ChangeObserver {
-    
+
     /**
      * Updates an <i>Observer</i>. Uses the <i>push</i> strategy (i.e. the
      * subject triggering the update passes itself as an argument).

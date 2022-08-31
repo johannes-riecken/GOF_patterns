@@ -15,15 +15,15 @@ package ca.ubc.cs.spl.aspectPatterns.examples.bridge.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
-/** 
- * Declares methods to print lines, decorators and text. Represents an 
+/**
+ * Declares methods to print lines, decorators and text. Represents an
  * <i>Implementor</i> in the context of the Bridge design pattern.
  *
  * @author  Jan Hannemann
@@ -33,24 +33,24 @@ package ca.ubc.cs.spl.aspectPatterns.examples.bridge.java;
  */
 
 public interface ScreenImplementation {
-    
+
         /**
          * Prints a line feed.
          */
 
         void printLine();
-        
-        /** 
+
+        /**
          * Prints a decorator symbol (a string of length 1).
          */
-         
+
         void printDecor();
-        
+
         /**
          * Prints the argument text.
          *
          * @param text the text to print
          */
-        
-        void printText(String text); 
+
+        void printText(String text);
 }

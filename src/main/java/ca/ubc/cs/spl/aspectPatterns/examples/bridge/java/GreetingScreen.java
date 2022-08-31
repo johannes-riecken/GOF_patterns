@@ -15,14 +15,14 @@ package ca.ubc.cs.spl.aspectPatterns.examples.bridge.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
-/** 
+/**
  * Prints/draws a greeting in a text box. Represents a <i>RefinedAbstraction
  * </i> in the context of the Bridge design pattern.
  *
@@ -31,20 +31,20 @@ package ca.ubc.cs.spl.aspectPatterns.examples.bridge.java;
  * @version 1.1, 01/26/04
  *
  */
- 
+
 public class GreetingScreen extends Screen {
-    
-    /** 
+
+    /**
      * Creates a new <code>GreetingScreen</code> object with the provided
      * <i>Implementor</i>.
      *
      * @param si the implementor to use
-     */       
+     */
 
     public GreetingScreen(ScreenImplementation si) {
         super(si);
     }
-    
+
     /**
      * Draws/prints a greeting in a text box
      */
@@ -54,4 +54,3 @@ public class GreetingScreen extends Screen {
     }
 }
 
-    

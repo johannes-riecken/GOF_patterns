@@ -15,11 +15,11 @@ package ca.ubc.cs.spl.aspectPatterns.examples.interpreter.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
@@ -32,13 +32,13 @@ package ca.ubc.cs.spl.aspectPatterns.examples.interpreter.java;
  */
 
 public class ExpressionException extends RuntimeException {
-    
+
     /**
      * Creates a new ExpressionException with the given message
      *
      * @param s the exception message
      */
-     
+
 	public ExpressionException(String s) {
 		super(s);
 	}

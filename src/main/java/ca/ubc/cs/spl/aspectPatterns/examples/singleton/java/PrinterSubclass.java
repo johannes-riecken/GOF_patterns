@@ -15,15 +15,15 @@ package ca.ubc.cs.spl.aspectPatterns.examples.singleton.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
- * Implements a sample subclass of the <i>Singleton</i> class. This class is 
+ * Implements a sample subclass of the <i>Singleton</i> class. This class is
  * to test whether subclasses can still access the Singleton's constructor.
  *
  * @author  Jan Hannemann
@@ -31,12 +31,12 @@ package ca.ubc.cs.spl.aspectPatterns.examples.singleton.java;
  * @version 1.1, 02/18/04
  */
 
-public class PrinterSubclass extends PrinterSingleton { 
-    
+public class PrinterSubclass extends PrinterSingleton {
+
     /**
      * Creates an instance of this class by calling <code>super()</code>.
      */
-    
+
 	public PrinterSubclass() {
 		super();
 	}

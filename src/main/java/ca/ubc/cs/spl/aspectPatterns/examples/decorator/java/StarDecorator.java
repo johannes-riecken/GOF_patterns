@@ -15,13 +15,13 @@ package ca.ubc.cs.spl.aspectPatterns.examples.decorator.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 /**
  * Implements a decorator that adds stars (" *** ") before and after the
  * string to decorate.
@@ -29,14 +29,14 @@ package ca.ubc.cs.spl.aspectPatterns.examples.decorator.java;
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/11/04
- */  
-         
+ */
+
 
 public class StarDecorator extends OutputDecorator {
 
     /**
      * Adds three stars before and after the argument string before passing
-     * the call on to the component this decorator decorates. 
+     * the call on to the component this decorator decorates.
      *
      * @param s the string to be decorated.
      */

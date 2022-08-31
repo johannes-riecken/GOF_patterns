@@ -15,56 +15,56 @@ package ca.ubc.cs.spl.aspectPatterns.examples.mediator.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-/** 
- * Basically a <code>JButton</code> with an <code>ActionListener</code>. 
- * The listener calls <code>clicked()</code> when the button gets pressed. 
+/**
+ * Basically a <code>JButton</code> with an <code>ActionListener</code>.
+ * The listener calls <code>clicked()</code> when the button gets pressed.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/12/04
  */
 
-public class Button extends JButton implements GUIColleague {   
-    
+public class Button extends JButton implements GUIColleague {
+
     private GUIMediator mediator;
-    
+
     /**
      * Creates a new <code>Button</code> object with the provided label.
      *
-     * @param name the label for the new <code>Button</code> object 
+     * @param name the label for the new <code>Button</code> object
      */
- 
+
  	public Button(String name) {
 		super(name);
 		this.setActionCommand(name);
 		this.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				clicked(); 
+				clicked();
 			}
-		}); 
+		});
 	}
-	
+
 	public void clicked() {
 	    mediator.colleagueChanged(this);
-	}  
-	
+	}
+
     /**
      * Allows to set the <i>Mediator</i> for this <i>Colleague</i>
      *
      * @param mediator the new mediator
      */
-    
+
 	public void setMediator(GUIMediator mediator) {
 	    this.mediator = mediator;
 	}

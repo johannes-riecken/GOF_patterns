@@ -15,15 +15,15 @@ package ca.ubc.cs.spl.aspectPatterns.examples.templateMethod.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Implements a <i>ConcreteClass</i> that decorates strings by adding a 
+ * Implements a <i>ConcreteClass</i> that decorates strings by adding a
  * period at the end of them.
  *
  * @author  Jan Hannemann
@@ -43,7 +43,7 @@ public class SimpleGenerator extends DecoratedStringGenerator {
 	public String prepare  (String s) {
 		return s;
 	}
-	
+
     /**
      * Filters a string. Does nothing.
      *
@@ -54,7 +54,7 @@ public class SimpleGenerator extends DecoratedStringGenerator {
 	public String filter   (String s) {
 		return s;
 	}
-	
+
     /**
      * Finalizes a string by adding a period to it.
      *

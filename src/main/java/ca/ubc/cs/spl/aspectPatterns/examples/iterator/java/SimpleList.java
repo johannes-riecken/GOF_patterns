@@ -15,33 +15,33 @@ package ca.ubc.cs.spl.aspectPatterns.examples.iterator.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Defines an interface for a basic list. 
+ * Defines an interface for a basic list.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/12/04
- * 
+ *
  * @see OpenList
  */
 
-public interface SimpleList { 
-    
-    /** 
+public interface SimpleList {
+
+    /**
      * Returns the number of elements in the list
      *
      * @return the number of elements in the list
      */
 
     int count();
-	
+
 	/**
 	 * Appends an object to the list
 	 *
@@ -68,5 +68,4 @@ public interface SimpleList {
 	 */
 
     Object get(int index);
-}	
-	
+}

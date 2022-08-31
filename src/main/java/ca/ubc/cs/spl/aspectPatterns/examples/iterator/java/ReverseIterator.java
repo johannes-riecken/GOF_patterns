@@ -1,4 +1,4 @@
-package ca.ubc.cs.spl.aspectPatterns.examples.iterator.java;  
+package ca.ubc.cs.spl.aspectPatterns.examples.iterator.java;
 
 /* -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
  *
@@ -15,19 +15,19 @@ package ca.ubc.cs.spl.aspectPatterns.examples.iterator.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 import java.util.Iterator;
 
 /**
- * Implements a reverse iterator. This means that it will return elements in 
- * reverse order. We chose not to define our own <i>Iterator</i>, but to use 
- * Java's <code>java.util.Iterator</code> interface. 
+ * Implements a reverse iterator. This means that it will return elements in
+ * reverse order. We chose not to define our own <i>Iterator</i>, but to use
+ * Java's <code>java.util.Iterator</code> interface.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
@@ -35,59 +35,59 @@ import java.util.Iterator;
  */
 
 public class ReverseIterator implements Iterator {
-    
+
     /**
      * the positition of the current element
      */
 
-	protected int current; 
-	
+	protected int current;
+
 	/**
 	 * the list this iterator operates on
 	 */
-	 
-	protected SimpleList list; 
-	
+
+	protected SimpleList list;
+
 	/**
 	 * Returns true if the iteration has more elements.
 	 *
 	 * @return true if the iteration has more elements
 	 */
-	
+
 	public boolean hasNext() {
 		return (current > 0);
 	}
-	
+
 	/**
 	 * This opional method is not implemented for this iterator.
-	 */ 
-	
+	 */
+
 	public void remove() {
 	    throw new UnsupportedOperationException("remove() not supported");
-    }                     
-	
+    }
+
     /**
      * Returns the next element in the iteration.
      *
-     * @return the next element in the iteration. 
+     * @return the next element in the iteration.
      */
 
 	public Object next() {
 		if (!hasNext()) {
-			throw new ArrayIndexOutOfBoundsException("Iterator out of Bounds"); 
+			throw new ArrayIndexOutOfBoundsException("Iterator out of Bounds");
 		} else {
     		return list.get(--current);
 	    }
 	}
-	
+
 	/**
 	 * Creates a new ReverseIterator from the given list.
 	 *
 	 * @param list the list to generate an iterator from
 	 */
-	
+
 	public ReverseIterator(SimpleList list) {
-		super();  
+		super();
 		this.list = list;
 		current = list.count();
 	}

@@ -15,16 +15,16 @@ package ca.ubc.cs.spl.aspectPatterns.examples.state.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Defines the interface for <i>Context</i>s within this queue example. The 
- * operation provided is <code>setState(QueueState)</code>.  
+ * Defines the interface for <i>Context</i>s within this queue example. The
+ * operation provided is <code>setState(QueueState)</code>.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales

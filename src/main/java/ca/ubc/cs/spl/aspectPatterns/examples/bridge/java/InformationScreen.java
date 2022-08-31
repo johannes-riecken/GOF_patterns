@@ -15,16 +15,16 @@ package ca.ubc.cs.spl.aspectPatterns.examples.bridge.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 
-/** 
- * Prints/draws the current system time in a text box. Represents a 
+/**
+ * Prints/draws the current system time in a text box. Represents a
  * <i>RefinedAbstraction</i> in the context of the Bridge design pattern.
  *
  * @author  Jan Hannemann
@@ -32,31 +32,30 @@ package ca.ubc.cs.spl.aspectPatterns.examples.bridge.java;
  * @version 1.1, 01/26/04
  *
  */
- 
-import java.util.Date;     
 
-public class InformationScreen extends Screen { 
-    
-    
-    /** 
+import java.util.Date;
+
+public class InformationScreen extends Screen {
+
+
+    /**
      * Creates a new <code>InformationScreen</code> object with the provided
      * <i>Implementor</i>.
      *
      * @param si the implementor to use
-     */       
+     */
 
     public InformationScreen(ScreenImplementation si) {
         super(si);
     }
 
-    
+
     /**
      * Draws/prints the system time in a text box
      */
 
-    public void drawInfo() {  
+    public void drawInfo() {
         Date date = new Date();
         drawTextBox("Current system time: "+date);
     }
 }
-        

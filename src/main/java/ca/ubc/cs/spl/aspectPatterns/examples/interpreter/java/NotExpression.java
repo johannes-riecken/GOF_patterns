@@ -15,11 +15,11 @@ package ca.ubc.cs.spl.aspectPatterns.examples.interpreter.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
@@ -33,23 +33,23 @@ package ca.ubc.cs.spl.aspectPatterns.examples.interpreter.java;
 
 public class NotExpression implements BooleanExpression {
 
-    /** 
+    /**
      * the <i>Expression</i> this <i>Expression</i> negates
      */
-     
+
 	protected BooleanExpression exp = null;
-	
+
 	/**
-	 * Creates a new NOT <i>Expression</i> negating the 
-	 * argument <i>Expression</i>   
+	 * Creates a new NOT <i>Expression</i> negating the
+	 * argument <i>Expression</i>
 	 *
-	 * @param exp the <i>Expression</i> to negate  
+	 * @param exp the <i>Expression</i> to negate
 	 */
 
 	public NotExpression(BooleanExpression exp) {
 		this.exp = exp;
 	}
-	
+
     /**
      * Evaluates this <i>Expression</i> in the given <i>Context</i>
      *
@@ -58,9 +58,9 @@ public class NotExpression implements BooleanExpression {
      */
 
 	public boolean evaluate(VariableContext c) {
-		return (! exp.evaluate(c)); 
+		return (! exp.evaluate(c));
 	}
-	
+
     /**
      * Replaces a variable with an <i>Expression</i>
      *
@@ -72,7 +72,7 @@ public class NotExpression implements BooleanExpression {
 	public BooleanExpression replace(String name, BooleanExpression exp) {
 		return new NotExpression(this.exp.replace(name, exp));
 	}
-		
+
     /**
      * Copies this <i>Expression</i>
      *

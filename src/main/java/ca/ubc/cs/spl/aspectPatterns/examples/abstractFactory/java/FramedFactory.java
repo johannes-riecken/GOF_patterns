@@ -15,23 +15,23 @@ package ca.ubc.cs.spl.aspectPatterns.examples.abstractFactory.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
-import javax.swing.JLabel; 
+
+import javax.swing.JLabel;
 import javax.swing.border.Border;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 
 /**
- * This <i>Concrete Factory</i> implements the 
- * <code>ComponentFactory</code> interface to provide 
+ * This <i>Concrete Factory</i> implements the
+ * <code>ComponentFactory</code> interface to provide
  * framed Swing GUI components.
- * 
+ *
  * @author Jan Hannemann
  * @author Gregor Kiczales
  * @version 1.1, 01/20/04
@@ -41,43 +41,43 @@ import javax.swing.JButton;
 public class FramedFactory implements ComponentFactory {
 
 	/**
-	 * Factory method to create framed <code>JLabel</code> objects. 
+	 * Factory method to create framed <code>JLabel</code> objects.
 	 *
 	 * @return the framed <code>JLabel</code>
 	 */
- 
+
 
 	public JLabel createLabel() {
 		JLabel label = new JLabel("This Label was created by " +getName());
 		Border raisedbevel = BorderFactory.createRaisedBevelBorder();
 		Border loweredbevel = BorderFactory.createLoweredBevelBorder();
 		label.setBorder(BorderFactory.createCompoundBorder(raisedbevel, loweredbevel));
-		
+
 		return label;
-	} 
-	
+	}
+
 	/**
-	 * Factory method to create framed <code>JButton</code> objects. 
+	 * Factory method to create framed <code>JButton</code> objects.
 	 *
 	 * @param  the label for the new <code>JButton</code>
 	 * @return the framed <code>JButton</code>
 	 */
- 
+
      public JButton createButton(String label) {
 		JButton button = new JButton(label);
 		Border raisedbevel = BorderFactory.createRaisedBevelBorder();
 		Border loweredbevel = BorderFactory.createLoweredBevelBorder();
 		button.setBorder(BorderFactory.createCompoundBorder(raisedbevel, loweredbevel));
 		return button;
-	}	
+	}
 
-    /** 	
+    /**
      * Returns the name of the factory.
      *
      * @return the name of the factory
      */
- 
+
  	public String getName() {
 		return "Framed Factory";
-	} 
+	}
 }

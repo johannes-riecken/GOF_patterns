@@ -15,17 +15,17 @@ package ca.ubc.cs.spl.aspectPatterns.examples.abstractFactory.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
-  
+
 import javax.swing.JPanel;
 import javax.swing.JFrame;
-import javax.swing.JLabel; 
-import javax.swing.JButton; 
+import javax.swing.JLabel;
+import javax.swing.JButton;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.ActionListener;
@@ -37,22 +37,22 @@ import java.awt.event.ActionEvent;
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 01/20/04
- * 
+ *
  */
-public class Display extends JFrame  { 
-    
+public class Display extends JFrame  {
+
     /**
      * Sets up the frame with a label and a button created by the respective
-     * concrete factories. Both button and frame receive their appropriate 
+     * concrete factories. Both button and frame receive their appropriate
      * listeners to close the frame when either the button is clicked or
      * the frame is closing.
      *
      * @param factory the factory to create GUI elements
-     */ 
+     */
 
 	public Display(ComponentFactory factory) {
-		super("New GUI"); 
-		JLabel label = factory.createLabel(); 
+		super("New GUI");
+		JLabel label = factory.createLabel();
 		JButton button = factory.createButton("OK");
 		button.addActionListener(new myActionListener(this));
 		JPanel panel = new JPanel();
@@ -60,42 +60,42 @@ public class Display extends JFrame  {
 		panel.add(button);
 		this.getContentPane().add(panel);
 		this.pack();
-		this.setVisible(true); 
+		this.setVisible(true);
 		this.addWindowListener(new myWindowListener(this));
 	}
-	
+
 	/**
-	 * Adds a window listener that closes the frame on demand 
+	 * Adds a window listener that closes the frame on demand
 	 */
-	
+
 	private class myWindowListener extends WindowAdapter {
-		
+
 		Display display = null;
-		
+
 		protected myWindowListener(Display display) {
 			super();
-			this.display = display;   
+			this.display = display;
 		}
-		
+
 		public void windowClosing(WindowEvent e) {
 			display.setVisible(false);
 		}
 	}
-	
+
 	/**
-	 * Adds a button listener that closes the frame on demand 
+	 * Adds a button listener that closes the frame on demand
 	 */
 
 	private class myActionListener implements ActionListener {
-	    
+
 	    Display display;
-	    
+
 	    protected myActionListener(Display display) {
 	        super();
 	        this.display = display;
 	    }
-	    
-	    public void actionPerformed(ActionEvent e) { 
+
+	    public void actionPerformed(ActionEvent e) {
 			display.setVisible(false);
 		}
 	}

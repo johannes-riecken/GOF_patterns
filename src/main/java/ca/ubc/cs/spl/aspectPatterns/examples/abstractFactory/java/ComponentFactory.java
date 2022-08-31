@@ -15,11 +15,11 @@ package ca.ubc.cs.spl.aspectPatterns.examples.abstractFactory.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 import javax.swing.JLabel;
@@ -32,12 +32,12 @@ import javax.swing.JButton;
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 01/20/04
- * 
+ *
  */
 public interface ComponentFactory {
-    
+
     /**
-     * Creates factory-specific <code>JLabel</code> products. 
+     * Creates factory-specific <code>JLabel</code> products.
      *
      * @return the factory-specific <code>JLabel</code>
      */
@@ -45,7 +45,7 @@ public interface ComponentFactory {
     JLabel createLabel();
 
     /**
-     * Creates factory-specific <code>JButton</code> products. 
+     * Creates factory-specific <code>JButton</code> products.
      *
      * @return the factory-specific <code>JButton</code>
      */
@@ -53,7 +53,7 @@ public interface ComponentFactory {
     JButton createButton(String label);
 
 
-    /** 	
+    /**
      * Returns the name of the factory.
      *
      * @return the name of the factory

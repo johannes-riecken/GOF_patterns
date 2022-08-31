@@ -15,88 +15,87 @@ package ca.ubc.cs.spl.aspectPatterns.examples.factoryMethod.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JComponent; 
+import javax.swing.JComponent;
 import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;  
+import java.awt.event.WindowEvent;
 import java.awt.Point;
 
 /**
- * Defines the <i>GUIComponentCreator</i> interface with the 
- * <i>factoryMethod()</i> method signature and the <i>anOperation()</i> 
- * method that uses it. For details, see GoF, page 108.<p> 
+ * Defines the <i>GUIComponentCreator</i> interface with the
+ * <i>factoryMethod()</i> method signature and the <i>anOperation()</i>
+ * method that uses it. For details, see GoF, page 108.<p>
  *
  * The factory method is <code>createComponent</code> and it creates
  * A JComponent (a button or a label, in this case). The <i>anOperation()</i>
  * method <code>showFrame()</code> uses the factory method to show a small
- * GUI. 
+ * GUI.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/11/04
- * 
+ *
  * @see ButtonCreator
  * @see LabelCreator
- */ 
- 
+ */
+
 public abstract class GUIComponentCreator {
-    
+
     /**
      * The factory method to be concretized by subclasses.
      *
      * @returns the created <i>ConcreteProduct</i>
      */
 
-    public abstract JComponent createComponent(); 
-    
+    public abstract JComponent createComponent();
+
     /**
      * Another factory method to create a title for the GUI frame created
      * by this class.
      *
      * @returns the title for the GUI frame
      */
-     
-    public abstract String getTitle(); 
 
-    /** 
+    public abstract String getTitle();
+
+    /**
      * the position for the next frame to be created (on the screen). This
-     * variable is used to make sure new frames appear staggered and don't 
+     * variable is used to make sure new frames appear staggered and don't
      * entirely overlap with existing frames.
      */
-     
+
     private static final Point lastFrameLocation = new Point(0, 0);
 
-    /** 
+    /**
      * Creates a <code>JFrame</code>, puts the <code>JComponent</code> that
      * is created by the factory method into it and displays the frame. This
-     * Method also provides a <code>WindowListener</code>. 
+     * Method also provides a <code>WindowListener</code>.
      */
-     
+
     public final void showFrame() {
         JFrame frame = new JFrame(getTitle());
-        
+
    		frame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {System.exit(0);}
 		});
-		    
+
 		JPanel panel = new JPanel();
-	
+
 		panel.add(createComponent());
-		
+
 		frame.getContentPane().add(panel);
-		frame.pack();    
+		frame.pack();
 		frame.setLocation(lastFrameLocation);
 		lastFrameLocation.translate(75, 75);
-		frame.setVisible(true);  
+		frame.setVisible(true);
     }
-}		
+}
 
-    

@@ -15,11 +15,11 @@ package ca.ubc.cs.spl.aspectPatterns.examples.factoryMethod.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 import javax.swing.JLabel;
@@ -31,10 +31,10 @@ import javax.swing.JComponent;
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/11/04
- * 
+ *
  * @see ButtonCreator
- */ 
- 
+ */
+
 public class LabelCreator extends GUIComponentCreator {
 
     /**
@@ -45,9 +45,9 @@ public class LabelCreator extends GUIComponentCreator {
 
     public JComponent createComponent() {
         JLabel label = new JLabel("This is a JLabel.");
-        return label;            
+        return label;
     }
-    
+
     /**
      * Returns a title explaining this example.
      *
@@ -57,4 +57,4 @@ public class LabelCreator extends GUIComponentCreator {
     public String getTitle() {
         return "Example 2: A JLabel";
     }
-}		
+}

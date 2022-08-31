@@ -15,11 +15,11 @@ package ca.ubc.cs.spl.aspectPatterns.examples.prototype.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
@@ -29,18 +29,18 @@ package ca.ubc.cs.spl.aspectPatterns.examples.prototype.java;
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/13/04
- * 
+ *
  * @see StringPrototypeA
- */ 
+ */
 
 public class StringPrototypeB implements Cloneable {
-    
+
     /**
      * the string that this object encapsulates
      */
-         
+
     protected String text;
-    
+
     /**
      * Creates a new StringPrototypeA object with the given string
      *
@@ -50,32 +50,32 @@ public class StringPrototypeB implements Cloneable {
     public StringPrototypeB(String init) {
         text = init;
     }
-    
+
     /**
      * Changes the string this object encapsulates
      *
      * @param newText the new text for this object.
-     */  
-    
+     */
+
     public void setText(String newText) {
         text = newText;
     }
-    
+
     /**
      * Returns a string representation of this object.
      *
      * @return a string representation of this object.
      */
-    
+
     public String toString() {
         return "StringPrototypeB: " + text;
-    } 
-    
-    /** 
+    }
+
+    /**
      * Returns a copy of this object. Does only work this way if the
      * superclass implements <code>clone()</code>.
      */
-    
+
     public Object clone() throws CloneNotSupportedException  {
         return super.clone();
     }

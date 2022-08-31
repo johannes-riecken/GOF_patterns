@@ -15,16 +15,16 @@ package ca.ubc.cs.spl.aspectPatterns.examples.memento.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Implements a sample <i>Originator</i> class. Objects of this particular 
- * <i>Originator</i> have state, an int representing the number of time 
+ * Implements a sample <i>Originator</i> class. Objects of this particular
+ * <i>Originator</i> have state, an int representing the number of time
  * the <code>increment()</code> method was called.
  *
  * @author  Jan Hannemann
@@ -33,46 +33,46 @@ package ca.ubc.cs.spl.aspectPatterns.examples.memento.java;
  */
 
 public class Counter {
-     
+
     /**
      * the number of times <code>increment()</code> was called on this object
      */
 
 	protected int currentValue = 0;
-	
+
     /**
      * increments the counter (this <i>Originator</i>'s state) by one
      */
 
-	public void increment() { 
-	    currentValue++; 
+	public void increment() {
+	    currentValue++;
 	}
-	
+
     /**
      * Displays the state of this <i>Originator</i>
      */
 
-	public void show() { 
-	    System.out.println("Originator value is " + currentValue); 
-	}  
-	
+	public void show() {
+	    System.out.println("Originator value is " + currentValue);
+	}
+
     /**
-     * Creates a <i>Memento</i> from this <i>Originator</i>, storing the 
+     * Creates a <i>Memento</i> from this <i>Originator</i>, storing the
      * current state
      */
 
-	public CounterMemento createMemento() { 
-	    return new CounterMemento(currentValue); 
+	public CounterMemento createMemento() {
+	    return new CounterMemento(currentValue);
 	}
-	
+
     /**
-     * Restores this <i>Originator</i> to former state stored by the 
+     * Restores this <i>Originator</i> to former state stored by the
      * memento passed
      *
      * @param memento the <i>Memento</i> that stores the prior state
      */
 
-	public void setMemento(CounterMemento memento) { 
-	    currentValue = memento.getState(); 
+	public void setMemento(CounterMemento memento) {
+	    currentValue = memento.getState();
 	}
 }

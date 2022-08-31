@@ -15,29 +15,29 @@ package ca.ubc.cs.spl.aspectPatterns.examples.flyweight.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
- 
+
 import java.util.Hashtable;
 
 /**
- * Implements a <i>FlyweightFactory</i> that employs a creation-on-demand 
+ * Implements a <i>FlyweightFactory</i> that employs a creation-on-demand
  * policy.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/11/04
- * 
+ *
  * @see PrintableFlyweight
  */
 
-public class PrintableFlyweightFactory { 
-    
-    /** 
+public class PrintableFlyweightFactory {
+
+    /**
      * stores the existing flyweights by character they represent
      */
 
@@ -45,7 +45,7 @@ public class PrintableFlyweightFactory {
 
     /**
      * Returns the flyweight representing the argument character.
-     * If the appropriate flyweight does not yet exist, it is created 
+     * If the appropriate flyweight does not yet exist, it is created
      * on demand.
      *
      * @param c the character for which the the flyweight is returned
@@ -54,19 +54,19 @@ public class PrintableFlyweightFactory {
 
 	public PrintableFlyweight getPrintableFlyweight(char c) {
 
-		Character ch = new Character(c); 
-		
+		Character ch = new Character(c);
+
 		if (printables.containsKey(ch)) {
-			return (PrintableFlyweight) printables.get(ch); 
+			return (PrintableFlyweight) printables.get(ch);
 		} else {
 			PrintableFlyweight flyweight = null;
 			if (Character.isWhitespace(c)) {
 				flyweight = new WhitespaceFlyweight(c);
-			} else { 
+			} else {
 				flyweight = new CharacterFlyweight(c);
 			}
 			printables.put(ch, flyweight);
-			return flyweight; 
-		} 
+			return flyweight;
+		}
 	}
-}			
+}

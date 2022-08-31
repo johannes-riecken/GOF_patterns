@@ -15,17 +15,17 @@ package ca.ubc.cs.spl.aspectPatterns.examples.command.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Implements a sample command. This one prints a short message to 
+ * Implements a sample command. This one prints a short message to
  * <code>System.out</code> whenever it executes. The message is
- * <quote>"ButtonCommand executed"</quote>. 
+ * <quote>"ButtonCommand executed"</quote>.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
@@ -33,14 +33,14 @@ package ca.ubc.cs.spl.aspectPatterns.examples.command.java;
  */
 
 public class ButtonCommand implements Command {
-	
+
 /**
- * Implements a sample command. This one prints a short message to 
+ * Implements a sample command. This one prints a short message to
  * <code>System.out</code> whenever it executes. The message is
- * <quote>"ButtonCommand executed"</quote>. 
+ * <quote>"ButtonCommand executed"</quote>.
  */
 	public void executeCommand() {
 		System.out.println("ButtonCommand executed");
-	}  
+	}
 }
 

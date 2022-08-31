@@ -15,20 +15,20 @@ package ca.ubc.cs.spl.aspectPatterns.examples.abstractFactory.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code please see
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 import javax.swing.JLabel;
-import javax.swing.JButton; 
+import javax.swing.JButton;
 
 /**
- * This <i>Concrete Factory</i> implements the <code>ComponentFactory</code> 
+ * This <i>Concrete Factory</i> implements the <code>ComponentFactory</code>
  * interface to provide regular Swing GUI components.
- * 
+ *
  * @author Jan Hannemann
  * @author Gregor Kiczales
  * @version 1.1, 01/20/04
@@ -36,35 +36,35 @@ import javax.swing.JButton;
  */
 
 public class RegularFactory implements ComponentFactory {
-	  
+
 	/**
-	 * Factroy method to create regular <code>JLabel</code> objects. 
+	 * Factroy method to create regular <code>JLabel</code> objects.
 	 *
 	 * @return the regular <code>JLabel</code>
 	 */
- 
+
 	public JLabel createLabel() {
 		return new JLabel("This Label was created by " +getName());
 	}
-	
+
 	/**
-	 * Factory method to create regular <code>JButton</code> objects. 
+	 * Factory method to create regular <code>JButton</code> objects.
 	 *
 	 * @param  the label for the new <code>JButton</code>
 	 * @return the regular <code>JButton</code>
 	 */
- 
+
 	public JButton createButton(String label) {
 		return new JButton(label);
 	}
-    /** 	
+    /**
      * Returns the name of the factory.
      *
      * @return the name of the factory
      */
-     	  
+
  	public String getName() {
 		return ("Regular Factory");
-	} 
-	
+	}
+
 }

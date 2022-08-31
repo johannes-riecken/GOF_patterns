@@ -15,24 +15,24 @@ package ca.ubc.cs.spl.aspectPatterns.examples.proxy.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Defines the <i>Subject</i> interface that is implemented by both 
+ * Defines the <i>Subject</i> interface that is implemented by both
  * <code>RequestCounter</code> and <code>OutputImplementation</code>.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/17/04
- */  
- 
-public interface OutputSubject { 
-    
+ */
+
+public interface OutputSubject {
+
     /**
      * A type of <i>request(..)</i>.
      *
@@ -48,7 +48,7 @@ public interface OutputSubject {
      */
 
     void regularRequest(String s);
-	
+
 	/**
      * A type of <i>request(..)</i>.
 	 *

@@ -15,53 +15,53 @@ package ca.ubc.cs.spl.aspectPatterns.examples.memento.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
  * Implements a sample <i>Memento</i> class. This particular one stores
- * the counter of its <i>Originator</i> (an int value), and returns it 
+ * the counter of its <i>Originator</i> (an int value), and returns it
  * upon request.
  *
  * @author  Jan Hannemann
  * @author  Gregor Kiczales
  * @version 1.1, 02/12/04
- * 
+ *
  * @see Originator
  */
 
-public class CounterMemento {         
-	
+public class CounterMemento {
+
     /**
      * stores the <i>Originator</i>'s state
      */
 
 	private int state;
-	
+
     /**
      * Captures the <i>Originator</i>'s state and stores it
      *
      * @param newState the state to store
      */
 
-	public void setState(int newState) { 
-	    state = newState; 
+	public void setState(int newState) {
+	    state = newState;
 	}
-	
+
     /**
      * Returns the stored <i>Originator</i> state
      *
      * @return the stored state
      */
 
-	public int  getState() { 
-	    return state; 
-	}  
-	
+	public int  getState() {
+	    return state;
+	}
+
     /**
      * Creates a <i>Memento</i> object with the give state
      *

@@ -15,17 +15,17 @@ package ca.ubc.cs.spl.aspectPatterns.examples.interpreter.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 import java.util.Hashtable;
 
 /**
- * Implements a <i>Context</i> for the interpretation of boolean 
+ * Implements a <i>Context</i> for the interpretation of boolean
  * expressions<p>
  *
  * @author  Jan Hannemann
@@ -33,8 +33,8 @@ import java.util.Hashtable;
  * @version 1.1, 02/11/04
  */
 
-public class VariableContext { 
-    
+public class VariableContext {
+
     /**
      * stores the mapping between variable names and values
      */
@@ -47,22 +47,22 @@ public class VariableContext {
      * @param name the name of the variable
      * @return the value of the variable
      */
-    
+
 	public boolean lookup(String name) {
 		Boolean value = (Boolean) assignments.get(name);
 		if (value == null) {
 			throw new ExpressionException("No variable \""+name+"\" known.");
 		}
 		return value.booleanValue();
-	}  
-	
+	}
+
 	/**
 	 * Assigns a boolean value to a <code>VariableExpression</code>
 	 *
 	 * @param varExp the varaible <i>Expression</i> to assign a value to
-	 * @param bool the boolean value to assign 
+	 * @param bool the boolean value to assign
 	 */
-	
+
 	public void assign(VariableExpression varExp, boolean bool) {
 		assignments.put(varExp.getName(), new Boolean(bool));
 	}

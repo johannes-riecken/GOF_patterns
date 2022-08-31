@@ -15,18 +15,18 @@ package ca.ubc.cs.spl.aspectPatterns.examples.chainOfResponsibility.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
-  
+
 import javax.swing.*;
 import java.awt.event.*;
 
-/** 
- * GUI element at the start of the responsibility chain. A click on the 
+/**
+ * GUI element at the start of the responsibility chain. A click on the
  * button starts a request. The <code>Button</code> will only handle the
  * request if the SHIFT key was pressed when the button was clicked.
  *
@@ -36,39 +36,39 @@ import java.awt.event.*;
  *
  */
 
-public class Button extends JButton implements ClickHandler { 
-	
+public class Button extends JButton implements ClickHandler {
+
     /**
      * the successor in the chain of responsibility
      */
 
 	protected ClickHandler successor;
 
-    /** 
-     * Creates a <code>Button</code> with a given label and successor. 
+    /**
+     * Creates a <code>Button</code> with a given label and successor.
      *
      * @param label The button label
      * @param successor The successor in the chain of responsibility
-     */	 
-     
+     */
+
     public Button(String label, ClickHandler successor) {
 		super(label);
-		this.successor = successor; 
+		this.successor = successor;
 		this.addActionListener( new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				handleClick(new Click(ae));
 			}
 		});
-	}      
-	
-    /** 
+	}
+
+    /**
      * Implements the method to handle requests as defined by the
      * <code>ClickHandler</code> interface. The request is only handled here
      * if the SHIFT key was pressed.
-     * 
+     *
      * @see ClickHandler
-     */	 
-     
+     */
+
 	public void handleClick(Click click) {
 		System.out.println("Button is asked to handle the request...");
 		if (click.hasShiftMask()) {
@@ -79,8 +79,7 @@ public class Button extends JButton implements ClickHandler {
 			} else {
 				successor.handleClick(click);
 			}
-		} 
+		}
 	}
 }
-	
-	
+

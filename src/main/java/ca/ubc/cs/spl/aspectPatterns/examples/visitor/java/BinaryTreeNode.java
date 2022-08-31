@@ -15,15 +15,15 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  * License.
  *
  * The Original Code is ca.ubc.cs.spl.aspectPatterns.
- * 
+ *
  * For more details and the latest version of this code, please see:
  * http://www.cs.ubc.ca/labs/spl/projects/aodps.html
  *
- * Contributor(s):   
+ * Contributor(s):
  */
 
 /**
- * Implements a <i>ConcreteElement</i> of the aggregate strcuture. This is a 
+ * Implements a <i>ConcreteElement</i> of the aggregate strcuture. This is a
  * non-terminal binary tree element.
  *
  * @author  Jan Hannemann
@@ -31,18 +31,18 @@ package ca.ubc.cs.spl.aspectPatterns.examples.visitor.java;
  * @version 1.1, 02/17/04
  */
 
-public class BinaryTreeNode implements Visitable { 
-    
+public class BinaryTreeNode implements Visitable {
+
     /**
      * the left subtree
      */
-    
+
 	protected Visitable left;
 
     /**
      * the right subtree
      */
-    
+
 	protected Visitable right;
 
     /**
@@ -50,17 +50,17 @@ public class BinaryTreeNode implements Visitable {
      *
      * @param visitor the NodeVisitor that is to be accepted.
      */
-     
+
 	public void accept(BinaryTreeVisitor visitor) {
 		visitor.visitNode(this);
-	}  
-	
+	}
+
 	/**
 	 * Accessor for the left subtree.
 	 *
 	 * @return the left subtree.
 	 */
-	
+
 	public Visitable getLeft() {
 	    return left;
 	}
@@ -70,18 +70,18 @@ public class BinaryTreeNode implements Visitable {
 	 *
 	 * @return the right subtree.
 	 */
-	
+
 	public Visitable getRight() {
 	    return right;
 	}
 
     /**
-     * Creates a non-terminal node of a binary tree. 
+     * Creates a non-terminal node of a binary tree.
      *
      * @param left the new left subtree.
      * @param right the new left subtree.
      */
-     
+
 	public BinaryTreeNode(Visitable left, Visitable right) {
 		this.left = left;
 		this.right = right;
