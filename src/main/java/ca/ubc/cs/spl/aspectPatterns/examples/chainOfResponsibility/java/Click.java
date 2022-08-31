@@ -42,18 +42,18 @@ public class Click {
      * the ActionEvent that describes this Click
      */
 
-	protected ActionEvent description;
+    protected ActionEvent description;
 
-	/**
-	 * Creates a <code>Click</code> described by the provided <code>
-	 * ActionEvent</code>.
-	 *
-	 * @param description the ActionEvent that describes this Click
-	 */
+    /**
+     * Creates a <code>Click</code> described by the provided <code>
+     * ActionEvent</code>.
+     *
+     * @param description the ActionEvent that describes this Click
+     */
 
     public Click(ActionEvent description) {
-		this.description = description;
-	}
+        this.description = description;
+    }
 
     /**
      * Convenience method for inquiring whether SHIFT was pressed while
@@ -62,31 +62,31 @@ public class Click {
      * @return whether the SHIFT key was pressed when the click occured
      */
 
-	public boolean hasShiftMask() {
-		return ((description.getModifiers() & ActionEvent.SHIFT_MASK) != 0 );
-	}
+    public boolean hasShiftMask() {
+        return ((description.getModifiers() & ActionEvent.SHIFT_MASK) != 0 );
+    }
 
-	/**
-	 * Convenience method for inquiring whether ALT was pressed while
-	 * the click occured.
-	 *
-	 * @return whether the ALT key was pressed when the click occured
-	 */
+    /**
+     * Convenience method for inquiring whether ALT was pressed while
+     * the click occured.
+     *
+     * @return whether the ALT key was pressed when the click occured
+     */
 
-	public boolean hasAltMask() {
-		return ((description.getModifiers() & ActionEvent.ALT_MASK) != 0 );
-	}
+    public boolean hasAltMask() {
+        return ((description.getModifiers() & ActionEvent.ALT_MASK) != 0 );
+    }
 
-	/**
-	 * Convenience method for inquiring whether CTRL was pressed while
-	 * the click occured.
-	 *
-	 * @return whether the CTRL key was pressed when the click occured
-	 */
+    /**
+     * Convenience method for inquiring whether CTRL was pressed while
+     * the click occured.
+     *
+     * @return whether the CTRL key was pressed when the click occured
+     */
 
-	public boolean hasCtrlMask() {
-		return ((description.getModifiers() & ActionEvent.CTRL_MASK) != 0 );
-	}
+    public boolean hasCtrlMask() {
+        return ((description.getModifiers() & ActionEvent.CTRL_MASK) != 0 );
+    }
 
 }
 

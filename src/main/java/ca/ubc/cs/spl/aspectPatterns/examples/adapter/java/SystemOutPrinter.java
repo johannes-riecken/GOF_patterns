@@ -43,7 +43,7 @@ public class SystemOutPrinter {
      */
 
 
-	public void printToSystemOut(String s) {
-		System.out.println(s);
-	}
+    public void printToSystemOut(String s) {
+        System.out.println(s);
+    }
 }

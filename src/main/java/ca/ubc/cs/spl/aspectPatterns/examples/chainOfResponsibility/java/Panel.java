@@ -43,7 +43,7 @@ public class Panel extends JPanel implements ClickHandler {
      * the successor in the chain of responsibility
      */
 
-	protected ClickHandler successor;
+    protected ClickHandler successor;
 
     /**
      * Creates a <code>Panel</code> with a given successor.
@@ -52,9 +52,9 @@ public class Panel extends JPanel implements ClickHandler {
      */
 
  	public Panel(ClickHandler successor) {
-		super();
-		this.successor = successor;
-	}
+        super();
+        this.successor = successor;
+    }
 
 
     /**
@@ -65,16 +65,16 @@ public class Panel extends JPanel implements ClickHandler {
      * @see ClickHandler
      */
 
-	public void handleClick(Click click) {
-		System.out.println("Panel is asked to handle the request...");
-		if (click.hasCtrlMask()) {
-			System.out.println("Panel handles the request.");
-		} else {
-			if (successor == null) {
-				throw new RuntimeException("request unhandled (end of chain reached)");
-			} else {
-				successor.handleClick(click);
-			}
-		}
-	}
+    public void handleClick(Click click) {
+        System.out.println("Panel is asked to handle the request...");
+        if (click.hasCtrlMask()) {
+            System.out.println("Panel handles the request.");
+        } else {
+            if (successor == null) {
+                throw new RuntimeException("request unhandled (end of chain reached)");
+            } else {
+                successor.handleClick(click);
+            }
+        }
+    }
 }

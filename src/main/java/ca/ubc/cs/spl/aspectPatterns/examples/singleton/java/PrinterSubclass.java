@@ -37,7 +37,7 @@ public class PrinterSubclass extends PrinterSingleton {
      * Creates an instance of this class by calling <code>super()</code>.
      */
 
-	public PrinterSubclass() {
-		super();
-	}
+    public PrinterSubclass() {
+        super();
+    }
 }

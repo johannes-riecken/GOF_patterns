@@ -42,30 +42,30 @@ public interface SimpleList {
 
     int count();
 
-	/**
-	 * Appends an object to the list
-	 *
-	 * @param o the object to append
-	 * @return true if successful, false otherwise
-	 */
+    /**
+     * Appends an object to the list
+     *
+     * @param o the object to append
+     * @return true if successful, false otherwise
+     */
 
     boolean append(Object o);
 
-	/**
-	 * Removes an object from the list
-	 *
-	 * @param o the object to remove
-	 * @return true if successful, false otherwise
-	 */
+    /**
+     * Removes an object from the list
+     *
+     * @param o the object to remove
+     * @return true if successful, false otherwise
+     */
 
     boolean remove(Object o);
 
-	/**
-	 * Returns an object from the list at a given index
-	 *
-	 * @param index the position of the object
-	 * @return the object at position index
-	 */
+    /**
+     * Returns an object from the list at a given index
+     *
+     * @param index the position of the object
+     * @return the object at position index
+     */
 
     Object get(int index);
 }

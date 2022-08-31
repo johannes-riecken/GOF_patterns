@@ -46,18 +46,18 @@ public class Button extends JButton implements GUIColleague {
      */
 
  	public Button(String name) {
-		super(name);
-		this.setActionCommand(name);
-		this.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				clicked();
-			}
-		});
-	}
+        super(name);
+        this.setActionCommand(name);
+        this.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                clicked();
+            }
+        });
+    }
 
-	public void clicked() {
-	    mediator.colleagueChanged(this);
-	}
+    public void clicked() {
+        mediator.colleagueChanged(this);
+    }
 
     /**
      * Allows to set the <i>Mediator</i> for this <i>Colleague</i>
@@ -65,7 +65,7 @@ public class Button extends JButton implements GUIColleague {
      * @param mediator the new mediator
      */
 
-	public void setMediator(GUIMediator mediator) {
-	    this.mediator = mediator;
-	}
+    public void setMediator(GUIMediator mediator) {
+        this.mediator = mediator;
+    }
 }

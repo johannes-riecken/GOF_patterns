@@ -40,19 +40,19 @@ public class QueueNormal implements QueueState {
      * stores the items in the queue
      */
 
-	protected Object[] items = new Object[3];
+    protected Object[] items = new Object[3];
 
     /**
      * stores the index of the first item in the queue
      */
 
-	protected int first = 0;
+    protected int first = 0;
 
     /**
      * stores the index of the last item in the queue
      */
 
-	protected int last  = 0;
+    protected int last  = 0;
 
     /**
      * Creates a new QueueNormal state object with the given set of elements
@@ -63,18 +63,18 @@ public class QueueNormal implements QueueState {
      * @param last the index of the last item in the queue
      */
 
-	public QueueNormal(Object[] items, int first, int last) {
-		this.items = items;
-		this.first = first;
-		this.last  = last;
-	}
+    public QueueNormal(Object[] items, int first, int last) {
+        this.items = items;
+        this.first = first;
+        this.last  = last;
+    }
 
-	/**
-	 * Alternate constructor that uses preset values for object variables.
-	 */
+    /**
+     * Alternate constructor that uses preset values for object variables.
+     */
 
-	public QueueNormal() {
-	}
+    public QueueNormal() {
+    }
 
     /**
      * Tries to insert an object into the queue. Returns true if successful,
@@ -87,14 +87,14 @@ public class QueueNormal implements QueueState {
      * @return true if insertion was successful, false otherwise.
      */
 
-	public boolean insert(QueueContext context, Object arg) {
-		items[(last)%items.length] = arg;
-		last = (last+1) % items.length;
-		if (first == last) {
-			context.setState(new QueueFull(items, first));
-		}
-		return true;
-	}
+    public boolean insert(QueueContext context, Object arg) {
+        items[(last)%items.length] = arg;
+        last = (last+1) % items.length;
+        if (first == last) {
+            context.setState(new QueueFull(items, first));
+        }
+        return true;
+    }
 
     /**
      * Returns the first item in the queue.
@@ -104,9 +104,9 @@ public class QueueNormal implements QueueState {
      * @return the first item in the queue.
      */
 
-	public Object  getFirst(QueueContext context) {
-		return items[first];
-	}
+    public Object  getFirst(QueueContext context) {
+        return items[first];
+    }
 
     /**
      * Tries to remove an object from the queue. Returns true if successful,
@@ -119,11 +119,11 @@ public class QueueNormal implements QueueState {
      * @return true if deletion was successful, false otherwise.
      */
 
-	public boolean removeFirst(QueueContext context){
-		first = (first + 1) % items.length;
-		if (first == last) {
-			context.setState(new QueueEmpty());
-		}
-		return true;
-	}
+    public boolean removeFirst(QueueContext context){
+        first = (first + 1) % items.length;
+        if (first == last) {
+            context.setState(new QueueEmpty());
+        }
+        return true;
+    }
 }

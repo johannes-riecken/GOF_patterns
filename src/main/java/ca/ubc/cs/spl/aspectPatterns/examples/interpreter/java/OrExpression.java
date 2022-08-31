@@ -37,13 +37,13 @@ public class OrExpression implements BooleanExpression {
      * stores the first part of this OR <i>Expression</i>
      */
 
-	protected BooleanExpression expression1;
+    protected BooleanExpression expression1;
 
     /**
      * stores the second part of this OR <i>Expression</i>
      */
 
-	protected BooleanExpression expression2;
+    protected BooleanExpression expression2;
 
     /**
      * Creates a new OR <i>Expression</i> with the given parts
@@ -52,10 +52,10 @@ public class OrExpression implements BooleanExpression {
      * @param expression1 the second <i>Expression</i>
      */
 
-	public OrExpression(BooleanExpression op1, BooleanExpression op2) {
-		this.expression1 = op1;
-		this.expression2 = op2;
-	}
+    public OrExpression(BooleanExpression op1, BooleanExpression op2) {
+        this.expression1 = op1;
+        this.expression2 = op2;
+    }
 
     /**
      * Evaluates this <i>Expression</i> in the given <i>Context</i>
@@ -64,9 +64,9 @@ public class OrExpression implements BooleanExpression {
      * @returns the boolean value of the <i>Expression</i>
      */
 
-	public boolean evaluate(VariableContext c) {
-		return (expression1.evaluate(c) || expression2.evaluate(c));
-	}
+    public boolean evaluate(VariableContext c) {
+        return (expression1.evaluate(c) || expression2.evaluate(c));
+    }
 
     /**
      * Replaces a variable with an <i>Expression</i>
@@ -76,9 +76,9 @@ public class OrExpression implements BooleanExpression {
      * @returns a copy of this <i>Expression</i> with the variable replaced
      */
 
-	public BooleanExpression replace(String name, BooleanExpression exp) {
-		return new OrExpression(expression1.replace(name, exp), expression2.replace(name,exp));
-	}
+    public BooleanExpression replace(String name, BooleanExpression exp) {
+        return new OrExpression(expression1.replace(name, exp), expression2.replace(name,exp));
+    }
 
     /**
      * Copies this <i>Expression</i>
@@ -86,7 +86,7 @@ public class OrExpression implements BooleanExpression {
      * @returns the copied <i>Expression</i>
      */
 
-	public BooleanExpression copy() {
-		return new OrExpression(expression1.copy(), expression2.copy());
-	}
+    public BooleanExpression copy() {
+        return new OrExpression(expression1.copy(), expression2.copy());
+    }
 }

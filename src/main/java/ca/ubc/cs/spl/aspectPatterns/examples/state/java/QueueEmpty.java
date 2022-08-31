@@ -48,11 +48,11 @@ public class QueueEmpty implements QueueState {
      * @return true if insertion was successful, false otherwise.
      */
 
-	public boolean insert(QueueContext context, Object arg) {
-		QueueNormal nextState = new QueueNormal();
-		context.setState(nextState);
-		return nextState.insert(context, arg);
-	}
+    public boolean insert(QueueContext context, Object arg) {
+        QueueNormal nextState = new QueueNormal();
+        context.setState(nextState);
+        return nextState.insert(context, arg);
+    }
 
     /**
      * Returns the first item in the queue. Returns null since the queue is
@@ -63,9 +63,9 @@ public class QueueEmpty implements QueueState {
      * @return null.
      */
 
-	public Object  getFirst(QueueContext context) {
-		return null;
-	}
+    public Object  getFirst(QueueContext context) {
+        return null;
+    }
 
     /**
      * Tries to remove an object from the queue. Returns false (queue is
@@ -76,8 +76,8 @@ public class QueueEmpty implements QueueState {
      * @return false.
      */
 
-	public boolean removeFirst(QueueContext context){
-		return false;
-	}
+    public boolean removeFirst(QueueContext context){
+        return false;
+    }
 
 }

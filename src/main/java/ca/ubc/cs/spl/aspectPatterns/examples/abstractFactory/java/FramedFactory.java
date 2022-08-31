@@ -40,36 +40,36 @@ import javax.swing.JButton;
 
 public class FramedFactory implements ComponentFactory {
 
-	/**
-	 * Factory method to create framed <code>JLabel</code> objects.
-	 *
-	 * @return the framed <code>JLabel</code>
-	 */
+    /**
+     * Factory method to create framed <code>JLabel</code> objects.
+     *
+     * @return the framed <code>JLabel</code>
+     */
 
 
-	public JLabel createLabel() {
-		JLabel label = new JLabel("This Label was created by " +getName());
-		Border raisedbevel = BorderFactory.createRaisedBevelBorder();
-		Border loweredbevel = BorderFactory.createLoweredBevelBorder();
-		label.setBorder(BorderFactory.createCompoundBorder(raisedbevel, loweredbevel));
+    public JLabel createLabel() {
+        JLabel label = new JLabel("This Label was created by " +getName());
+        Border raisedbevel = BorderFactory.createRaisedBevelBorder();
+        Border loweredbevel = BorderFactory.createLoweredBevelBorder();
+        label.setBorder(BorderFactory.createCompoundBorder(raisedbevel, loweredbevel));
 
-		return label;
-	}
+        return label;
+    }
 
-	/**
-	 * Factory method to create framed <code>JButton</code> objects.
-	 *
-	 * @param  the label for the new <code>JButton</code>
-	 * @return the framed <code>JButton</code>
-	 */
+    /**
+     * Factory method to create framed <code>JButton</code> objects.
+     *
+     * @param  the label for the new <code>JButton</code>
+     * @return the framed <code>JButton</code>
+     */
 
      public JButton createButton(String label) {
-		JButton button = new JButton(label);
-		Border raisedbevel = BorderFactory.createRaisedBevelBorder();
-		Border loweredbevel = BorderFactory.createLoweredBevelBorder();
-		button.setBorder(BorderFactory.createCompoundBorder(raisedbevel, loweredbevel));
-		return button;
-	}
+        JButton button = new JButton(label);
+        Border raisedbevel = BorderFactory.createRaisedBevelBorder();
+        Border loweredbevel = BorderFactory.createLoweredBevelBorder();
+        button.setBorder(BorderFactory.createCompoundBorder(raisedbevel, loweredbevel));
+        return button;
+    }
 
     /**
      * Returns the name of the factory.
@@ -78,6 +78,6 @@ public class FramedFactory implements ComponentFactory {
      */
 
  	public String getName() {
-		return "Framed Factory";
-	}
+        return "Framed Factory";
+    }
 }

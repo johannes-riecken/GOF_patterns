@@ -37,18 +37,18 @@ public class NotExpression implements BooleanExpression {
      * the <i>Expression</i> this <i>Expression</i> negates
      */
 
-	protected BooleanExpression exp = null;
+    protected BooleanExpression exp = null;
 
-	/**
-	 * Creates a new NOT <i>Expression</i> negating the
-	 * argument <i>Expression</i>
-	 *
-	 * @param exp the <i>Expression</i> to negate
-	 */
+    /**
+     * Creates a new NOT <i>Expression</i> negating the
+     * argument <i>Expression</i>
+     *
+     * @param exp the <i>Expression</i> to negate
+     */
 
-	public NotExpression(BooleanExpression exp) {
-		this.exp = exp;
-	}
+    public NotExpression(BooleanExpression exp) {
+        this.exp = exp;
+    }
 
     /**
      * Evaluates this <i>Expression</i> in the given <i>Context</i>
@@ -57,9 +57,9 @@ public class NotExpression implements BooleanExpression {
      * @return the boolean value of the <i>Expression</i>
      */
 
-	public boolean evaluate(VariableContext c) {
-		return (! exp.evaluate(c));
-	}
+    public boolean evaluate(VariableContext c) {
+        return (! exp.evaluate(c));
+    }
 
     /**
      * Replaces a variable with an <i>Expression</i>
@@ -69,9 +69,9 @@ public class NotExpression implements BooleanExpression {
      * @return a copy of this <i>Expression</i> with the variable replaced
      */
 
-	public BooleanExpression replace(String name, BooleanExpression exp) {
-		return new NotExpression(this.exp.replace(name, exp));
-	}
+    public BooleanExpression replace(String name, BooleanExpression exp) {
+        return new NotExpression(this.exp.replace(name, exp));
+    }
 
     /**
      * Copies this <i>Expression</i>
@@ -79,7 +79,7 @@ public class NotExpression implements BooleanExpression {
      * @returns the copied <i>Expression</i>
      */
 
-	public BooleanExpression copy() {
-		return new NotExpression(exp.copy());
-	}
+    public BooleanExpression copy() {
+        return new NotExpression(exp.copy());
+    }
 }

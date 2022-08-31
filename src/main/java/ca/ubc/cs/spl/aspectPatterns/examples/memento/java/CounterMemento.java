@@ -40,7 +40,7 @@ public class CounterMemento {
      * stores the <i>Originator</i>'s state
      */
 
-	private int state;
+    private int state;
 
     /**
      * Captures the <i>Originator</i>'s state and stores it
@@ -48,9 +48,9 @@ public class CounterMemento {
      * @param newState the state to store
      */
 
-	public void setState(int newState) {
-	    state = newState;
-	}
+    public void setState(int newState) {
+        state = newState;
+    }
 
     /**
      * Returns the stored <i>Originator</i> state
@@ -58,9 +58,9 @@ public class CounterMemento {
      * @return the stored state
      */
 
-	public int  getState() {
-	    return state;
-	}
+    public int  getState() {
+        return state;
+    }
 
     /**
      * Creates a <i>Memento</i> object with the give state
@@ -68,7 +68,7 @@ public class CounterMemento {
      * @param init the initial state to store
      */
 
-	public CounterMemento(int init) {
-		state = init;
-	}
+    public CounterMemento(int init) {
+        state = init;
+    }
 }

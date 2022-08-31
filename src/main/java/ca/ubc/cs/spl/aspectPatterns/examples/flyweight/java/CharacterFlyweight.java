@@ -38,7 +38,7 @@ public class CharacterFlyweight implements PrintableFlyweight {
      * The character this <i>ConcreteFlyweight</i> represents
      */
 
-	private final char c;
+    private final char c;
 
 
     /**
@@ -48,9 +48,9 @@ public class CharacterFlyweight implements PrintableFlyweight {
      * @param c the character to represent
      */
 
-	public CharacterFlyweight(char c) {
-		this.c = c;
-	}
+    public CharacterFlyweight(char c) {
+        this.c = c;
+    }
 
     /**
      * Prints the stored character.
@@ -59,7 +59,7 @@ public class CharacterFlyweight implements PrintableFlyweight {
      * uppercase
      */
 
-	public void print(boolean uppercase) {
-		System.out.print(uppercase ? Character.toUpperCase(c) : c);
-	}
+    public void print(boolean uppercase) {
+        System.out.print(uppercase ? Character.toUpperCase(c) : c);
+    }
 }

@@ -72,10 +72,10 @@ public interface FileSystemComponent {
 
     int getChildCount();
 
-	/**
-	 * Returns the size of this FileSystemComponent
-	 *
-	 * @return the size of the component (on disk)
-	 */
+    /**
+     * Returns the size of this FileSystemComponent
+     *
+     * @return the size of the component (on disk)
+     */
     int getSize();
 }

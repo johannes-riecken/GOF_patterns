@@ -84,18 +84,18 @@ public abstract class GUIComponentCreator {
         JFrame frame = new JFrame(getTitle());
 
    		frame.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {System.exit(0);}
-		});
+            public void windowClosing(WindowEvent e) {System.exit(0);}
+        });
 
-		JPanel panel = new JPanel();
+        JPanel panel = new JPanel();
 
-		panel.add(createComponent());
+        panel.add(createComponent());
 
-		frame.getContentPane().add(panel);
-		frame.pack();
-		frame.setLocation(lastFrameLocation);
-		lastFrameLocation.translate(75, 75);
-		frame.setVisible(true);
+        frame.getContentPane().add(panel);
+        frame.pack();
+        frame.setLocation(lastFrameLocation);
+        lastFrameLocation.translate(75, 75);
+        frame.setVisible(true);
     }
 }
 

@@ -41,13 +41,13 @@ public class QueueFull implements QueueState {
      * stores the items in the queue
      */
 
-	protected Object[] items;
+    protected Object[] items;
 
-	/**
-	 * stores the index of the first item in the queue.
-	 */
+    /**
+     * stores the index of the first item in the queue.
+     */
 
-	protected int first;
+    protected int first;
 
     /**
      * Creates a new QueueFull state object with the given set of elements
@@ -57,10 +57,10 @@ public class QueueFull implements QueueState {
      * @param first the index of the first item in the queue
      */
 
-	public QueueFull(Object[] items, int first) {
-		this.items = items;
-		this.first = first;
-	}
+    public QueueFull(Object[] items, int first) {
+        this.items = items;
+        this.first = first;
+    }
 
     /**
      * Tries to insert an object into the queue. Returns false since the
@@ -72,9 +72,9 @@ public class QueueFull implements QueueState {
      * @return false.
      */
 
-	public boolean insert(QueueContext context, Object arg) {
-		return false;
-	}
+    public boolean insert(QueueContext context, Object arg) {
+        return false;
+    }
 
     /**
      * Returns the first item in the queue.
@@ -84,9 +84,9 @@ public class QueueFull implements QueueState {
      * @return the first item in the queue.
      */
 
-	public Object  getFirst(QueueContext context) {
-		return items[first];
-	}
+    public Object  getFirst(QueueContext context) {
+        return items[first];
+    }
 
     /**
      * Tries to remove an object from the queue. Returns true if successful,
@@ -97,9 +97,9 @@ public class QueueFull implements QueueState {
      * @return true if deletion was successful, false otherwise.
      */
 
-	public boolean removeFirst(QueueContext context){
-		QueueState nextState = new QueueNormal(items, first, first);
-		context.setState(nextState);
-		return nextState.removeFirst(context);
-	}
+    public boolean removeFirst(QueueContext context){
+        QueueState nextState = new QueueNormal(items, first, first);
+        context.setState(nextState);
+        return nextState.removeFirst(context);
+    }
 }

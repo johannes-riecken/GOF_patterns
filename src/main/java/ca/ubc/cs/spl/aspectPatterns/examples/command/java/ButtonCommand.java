@@ -39,8 +39,8 @@ public class ButtonCommand implements Command {
  * <code>System.out</code> whenever it executes. The message is
  * <quote>"ButtonCommand executed"</quote>.
  */
-	public void executeCommand() {
-		System.out.println("ButtonCommand executed");
-	}
+    public void executeCommand() {
+        System.out.println("ButtonCommand executed");
+    }
 }
 

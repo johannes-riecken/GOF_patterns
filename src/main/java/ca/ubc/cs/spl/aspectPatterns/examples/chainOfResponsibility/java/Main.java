@@ -87,16 +87,16 @@ public class Main {
      * </ol>
      */
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Frame  frame  = new Frame("Chain of Responsibility");
-		Panel  panel  = new Panel(frame);
-		Button button = new Button("Click me to see the pattern in action! Use <SHIFT>, <CTRL>, and <ALT> during clicks to see different behavior", panel);
+        Frame  frame  = new Frame("Chain of Responsibility");
+        Panel  panel  = new Panel(frame);
+        Button button = new Button("Click me to see the pattern in action! Use <SHIFT>, <CTRL>, and <ALT> during clicks to see different behavior", panel);
 
-		frame.getContentPane().add(panel);
-		panel.add(button);
+        frame.getContentPane().add(panel);
+        panel.add(button);
 
-		frame.pack();
-		frame.setVisible(true);
-	}
+        frame.pack();
+        frame.setVisible(true);
+    }
 }

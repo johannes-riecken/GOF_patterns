@@ -66,18 +66,18 @@ public class Main {
      * @param exp the expression to evaluate
      */
 
-	private static void assignAndEvaluate(
-			VariableExpression x,
-			boolean xValue,
-			VariableExpression y,
-			boolean yValue,
-			VariableContext context,
-			BooleanExpression exp) {
-		context.assign(x, xValue);
-		context.assign(y, yValue);
-		boolean result = exp.evaluate(context);
-		System.out.println("The result for (x="+xValue+", y="+yValue+") is: "+result);
-	}
+    private static void assignAndEvaluate(
+            VariableExpression x,
+            boolean xValue,
+            VariableExpression y,
+            boolean yValue,
+            VariableContext context,
+            BooleanExpression exp) {
+        context.assign(x, xValue);
+        context.assign(y, yValue);
+        boolean result = exp.evaluate(context);
+        System.out.println("The result for (x="+xValue+", y="+yValue+") is: "+result);
+    }
 
     /**
      * Implements the driver for the Intepreter design pattern example.<p>
@@ -85,30 +85,30 @@ public class Main {
      * @param command-line parameters, unused.
      */
 
-	public static void main(String[] args) {
-		BooleanExpression exp = null;
-		VariableContext context = new VariableContext();
+    public static void main(String[] args) {
+        BooleanExpression exp = null;
+        VariableContext context = new VariableContext();
 
-		VariableExpression x = new VariableExpression("X");
-		VariableExpression y = new VariableExpression("Y");
+        VariableExpression x = new VariableExpression("X");
+        VariableExpression y = new VariableExpression("Y");
 
-		exp = new OrExpression(new AndExpression(new BooleanConstant(true), x),
-					    new AndExpression(y, new NotExpression(x)));
+        exp = new OrExpression(new AndExpression(new BooleanConstant(true), x),
+                        new AndExpression(y, new NotExpression(x)));
 
-		System.out.println("Testing Expression: ((true & x) | (y & !x))");
+        System.out.println("Testing Expression: ((true & x) | (y & !x))");
 
-		assignAndEvaluate(x, false, y, false, context, exp);
-		assignAndEvaluate(x, false, y, true,  context, exp);
-		assignAndEvaluate(x, true,  y, false, context, exp);
-		assignAndEvaluate(x, true,  y, true,  context, exp);
+        assignAndEvaluate(x, false, y, false, context, exp);
+        assignAndEvaluate(x, false, y, true,  context, exp);
+        assignAndEvaluate(x, true,  y, false, context, exp);
+        assignAndEvaluate(x, true,  y, true,  context, exp);
 
-		VariableExpression z = new VariableExpression("Z");
-		NotExpression   notZ = new NotExpression(z);
+        VariableExpression z = new VariableExpression("Z");
+        NotExpression   notZ = new NotExpression(z);
 
-		BooleanExpression replacement = exp.replace("Y", notZ);
-		context.assign(z, false);
-		boolean result = replacement.evaluate(context);
+        BooleanExpression replacement = exp.replace("Y", notZ);
+        context.assign(z, false);
+        boolean result = replacement.evaluate(context);
 
-		System.out.println("The result for the replacement is: "+result);
-	}
+        System.out.println("The result for the replacement is: "+result);
+    }
 }

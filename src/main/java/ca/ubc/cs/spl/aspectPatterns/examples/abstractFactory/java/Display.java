@@ -50,53 +50,53 @@ public class Display extends JFrame  {
      * @param factory the factory to create GUI elements
      */
 
-	public Display(ComponentFactory factory) {
-		super("New GUI");
-		JLabel label = factory.createLabel();
-		JButton button = factory.createButton("OK");
-		button.addActionListener(new myActionListener(this));
-		JPanel panel = new JPanel();
-		panel.add(label);
-		panel.add(button);
-		this.getContentPane().add(panel);
-		this.pack();
-		this.setVisible(true);
-		this.addWindowListener(new myWindowListener(this));
-	}
+    public Display(ComponentFactory factory) {
+        super("New GUI");
+        JLabel label = factory.createLabel();
+        JButton button = factory.createButton("OK");
+        button.addActionListener(new myActionListener(this));
+        JPanel panel = new JPanel();
+        panel.add(label);
+        panel.add(button);
+        this.getContentPane().add(panel);
+        this.pack();
+        this.setVisible(true);
+        this.addWindowListener(new myWindowListener(this));
+    }
 
-	/**
-	 * Adds a window listener that closes the frame on demand
-	 */
+    /**
+     * Adds a window listener that closes the frame on demand
+     */
 
-	private class myWindowListener extends WindowAdapter {
+    private class myWindowListener extends WindowAdapter {
 
-		Display display = null;
+        Display display = null;
 
-		protected myWindowListener(Display display) {
-			super();
-			this.display = display;
-		}
+        protected myWindowListener(Display display) {
+            super();
+            this.display = display;
+        }
 
-		public void windowClosing(WindowEvent e) {
-			display.setVisible(false);
-		}
-	}
+        public void windowClosing(WindowEvent e) {
+            display.setVisible(false);
+        }
+    }
 
-	/**
-	 * Adds a button listener that closes the frame on demand
-	 */
+    /**
+     * Adds a button listener that closes the frame on demand
+     */
 
-	private class myActionListener implements ActionListener {
+    private class myActionListener implements ActionListener {
 
-	    Display display;
+        Display display;
 
-	    protected myActionListener(Display display) {
-	        super();
-	        this.display = display;
-	    }
+        protected myActionListener(Display display) {
+            super();
+            this.display = display;
+        }
 
-	    public void actionPerformed(ActionEvent e) {
-			display.setVisible(false);
-		}
-	}
+        public void actionPerformed(ActionEvent e) {
+            display.setVisible(false);
+        }
+    }
 }

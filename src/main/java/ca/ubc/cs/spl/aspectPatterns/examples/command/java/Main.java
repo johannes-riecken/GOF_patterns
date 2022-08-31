@@ -64,7 +64,7 @@ public class Main {
      * Button1 and button3 have the same command, button2 has a different one.
      */
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
     	Button button1 = new Button("Print Date");
     	Button button2 = new Button("Command 1");
@@ -73,26 +73,26 @@ public class Main {
     	Command com1 = new ButtonCommand();
     	Command com2 = new ButtonCommand2();
 
-		JPanel pane = new JPanel();
-		pane.add(button1);
-		button1.setCommand(com1);
+        JPanel pane = new JPanel();
+        pane.add(button1);
+        button1.setCommand(com1);
 
-		pane.add(button2);
-		button2.setCommand(com2);
+        pane.add(button2);
+        button2.setCommand(com2);
 
-		pane.add(button3);
-		button3.setCommand(com1);
+        pane.add(button3);
+        button3.setCommand(com1);
 
-		// Note: Can not have two commands.
-		// That is within the pattern specification
+        // Note: Can not have two commands.
+        // That is within the pattern specification
 
         JFrame frame = new JFrame("Command Pattern Example");
 
-		frame.getContentPane().add(pane);
-		frame.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {System.exit(0);}
-		});
-		frame.pack();
-		frame.setVisible(true);
-	}
+        frame.getContentPane().add(pane);
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {System.exit(0);}
+        });
+        frame.pack();
+        frame.setVisible(true);
+    }
 }

@@ -39,7 +39,7 @@ public class ExpressionException extends RuntimeException {
      * @param s the exception message
      */
 
-	public ExpressionException(String s) {
-		super(s);
-	}
+    public ExpressionException(String s) {
+        super(s);
+    }
 }

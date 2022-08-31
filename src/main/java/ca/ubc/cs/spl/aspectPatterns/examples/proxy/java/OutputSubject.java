@@ -49,11 +49,11 @@ public interface OutputSubject {
 
     void regularRequest(String s);
 
-	/**
+    /**
      * A type of <i>request(..)</i>.
-	 *
-	 * @param s the string to print
-	 */
+     *
+     * @param s the string to print
+     */
 
     void unsafeRequest(String s);
 

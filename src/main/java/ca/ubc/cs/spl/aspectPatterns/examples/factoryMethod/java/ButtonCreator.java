@@ -49,9 +49,9 @@ public class ButtonCreator extends GUIComponentCreator {
     public JComponent createComponent() {
         final JButton button = new JButton("Click me!");
         button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				button.setText("Thank you!");
-			}
+            public void actionPerformed(ActionEvent e) {
+                button.setText("Thank you!");
+            }
         });
         return button;
     }

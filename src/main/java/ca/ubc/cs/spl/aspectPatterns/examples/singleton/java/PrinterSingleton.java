@@ -42,19 +42,19 @@ public class PrinterSingleton {
      * counts the instances of this class
      */
 
-	protected static int objectsSoFar = 0;
+    protected static int objectsSoFar = 0;
 
     /**
      * stores this <i>Singleton</i>'s only instance
      */
 
-	protected static PrinterSingleton onlyInstance = null;
+    protected static PrinterSingleton onlyInstance = null;
 
     /**
      * each instance has an ID to distinguish them.
      */
 
-	protected int id;
+    protected int id;
 
     /**
      * Creates a new <code>PrinterSingleton</code>. The new instance gets
@@ -71,9 +71,9 @@ public class PrinterSingleton {
      * constructor.
      */
 
-	protected PrinterSingleton() {
-		id = ++ objectsSoFar;
-	}
+    protected PrinterSingleton() {
+        id = ++ objectsSoFar;
+    }
 
     /**
      * Factory method that provides access to the <i>Singleton</i> instance.
@@ -82,18 +82,18 @@ public class PrinterSingleton {
      * @return the unique <i>Singleton</i> instance
      */
 
-	public static PrinterSingleton instance() {
-		if(onlyInstance == null) {
-			onlyInstance = new PrinterSingleton();
-		}
-		return onlyInstance;
-	}
+    public static PrinterSingleton instance() {
+        if(onlyInstance == null) {
+            onlyInstance = new PrinterSingleton();
+        }
+        return onlyInstance;
+    }
 
     /**
      * Prints the instance's ID to <code>System.out</code>.
      */
 
-	public void print() {
-		System.out.println("\tMy ID is "+id);
-	}
+    public void print() {
+        System.out.println("\tMy ID is "+id);
+    }
 }

@@ -56,20 +56,20 @@ public class Main {
      */
 
   	public static void main(String[] args)	{
-		int[] numbers = {3, 2, 9, 8, 1, 5, 6, 4, 7, 0};
+        int[] numbers = {3, 2, 9, 8, 1, 5, 6, 4, 7, 0};
 
-		SortingStrategy sort1 = new LinearSort();
-		SortingStrategy sort2 = new BubbleSort();
+        SortingStrategy sort1 = new LinearSort();
+        SortingStrategy sort2 = new BubbleSort();
 
-		Sorter sorter;
+        Sorter sorter;
 
-		if (args.length == 0) {
-			sorter = new Sorter(sort1, numbers);
-		}
-		else {
-			sorter = new Sorter(sort2, numbers);
-		}
-	}
+        if (args.length == 0) {
+            sorter = new Sorter(sort1, numbers);
+        }
+        else {
+            sorter = new Sorter(sort2, numbers);
+        }
+    }
 }
 
 

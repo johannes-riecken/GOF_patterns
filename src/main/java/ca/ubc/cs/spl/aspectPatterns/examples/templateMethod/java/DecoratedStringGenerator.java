@@ -43,12 +43,12 @@ public abstract class DecoratedStringGenerator {
      * @return the decorated string
      */
 
-	public String generate(String s) {
-		s = prepare(s);
-		s = filter(s);
-		s = finalize(s);
-		return s;
-	}
+    public String generate(String s) {
+        s = prepare(s);
+        s = filter(s);
+        s = finalize(s);
+        return s;
+    }
 
     /**
      * Prepares a string for decoration.
@@ -57,7 +57,7 @@ public abstract class DecoratedStringGenerator {
      * @return the prepared string
      */
 
-	public abstract String prepare  (String s);
+    public abstract String prepare  (String s);
 
     /**
      * Filters a string.
@@ -66,7 +66,7 @@ public abstract class DecoratedStringGenerator {
      * @return the filtered string
      */
 
-	public abstract String filter   (String s);
+    public abstract String filter   (String s);
 
     /**
      * Finalizes a string. This is the last step in the template method.
@@ -75,5 +75,5 @@ public abstract class DecoratedStringGenerator {
      * @return the finalized string
      */
 
-	public abstract String finalize (String s);
+    public abstract String finalize (String s);
 }

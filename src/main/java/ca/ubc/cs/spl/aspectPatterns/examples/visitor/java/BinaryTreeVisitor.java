@@ -49,11 +49,11 @@ public interface BinaryTreeVisitor {
 
     void visitLeaf(Visitable node);
 
-	/**
-	 * Returns the result of the visitor's operation
-	 *
-	 * @return a string describing the result of this visitor's operation.
-	 */
+    /**
+     * Returns the result of the visitor's operation
+     *
+     * @return a string describing the result of this visitor's operation.
+     */
 
     String report();
 }

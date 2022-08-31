@@ -46,7 +46,7 @@ public class Frame extends JFrame implements ClickHandler {
      * the successor in the chain of responsibility
      */
 
-	protected ClickHandler successor;
+    protected ClickHandler successor;
 
 
     /**
@@ -58,14 +58,14 @@ public class Frame extends JFrame implements ClickHandler {
      */
 
  	public Frame(String title) {
-		super(title);
+        super(title);
 
-		this.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
-				System.exit(0);
-			}
-		});
-	}
+        this.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+    }
 
     /**
      * Implements the method to handle requests as defined by the
@@ -75,18 +75,18 @@ public class Frame extends JFrame implements ClickHandler {
      * @see ClickHandler
      */
 
-	public void handleClick(Click click) {
-		System.out.println("Frame is asked to handle the request...");
-		if (click.hasAltMask()) {
-			System.out.println("Frame handles the request.");
-		} else {
-			if (successor == null) {
-				throw new RuntimeException("request unhandled (end of chain reached)");
-			} else {
-				successor.handleClick(click);
-			}
-		}
-	}
+    public void handleClick(Click click) {
+        System.out.println("Frame is asked to handle the request...");
+        if (click.hasAltMask()) {
+            System.out.println("Frame handles the request.");
+        } else {
+            if (successor == null) {
+                throw new RuntimeException("request unhandled (end of chain reached)");
+            } else {
+                successor.handleClick(click);
+            }
+        }
+    }
 }
 
 

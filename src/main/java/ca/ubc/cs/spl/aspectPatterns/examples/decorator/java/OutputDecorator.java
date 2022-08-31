@@ -38,7 +38,7 @@ public abstract class OutputDecorator implements Output {
      * the <i>Component</i> to decorate
      */
 
-	protected Output outputComponent;
+    protected Output outputComponent;
 
     /**
      * Prints the argument string to <code>System.out</code>. This method is
@@ -48,9 +48,9 @@ public abstract class OutputDecorator implements Output {
      * @param s the string to be printed.
      */
 
-	public void print(String s) {
-		outputComponent.print(s);
-	}
+    public void print(String s) {
+        outputComponent.print(s);
+    }
 
     /**
      * Defines the constructor signature. Also provides a default
@@ -63,6 +63,6 @@ public abstract class OutputDecorator implements Output {
      */
 
  	public OutputDecorator(Output output) {
-		this.outputComponent = output;
-	}
+        this.outputComponent = output;
+    }
 }

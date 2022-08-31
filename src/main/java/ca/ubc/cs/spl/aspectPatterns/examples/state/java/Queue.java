@@ -38,7 +38,7 @@ public class Queue implements QueueContext {
      * the current <i>State</i> of this <i>Context</i>
      */
 
-	protected QueueState state = new QueueEmpty();
+    protected QueueState state = new QueueEmpty();
 
     /**
      * Tries to insert an object into the queue. Returns true if successful,
@@ -48,9 +48,9 @@ public class Queue implements QueueContext {
      * @return true if insertion was successful, false otherwise.
      */
 
-	public boolean insert(Object arg) {
-		return state.insert(this, arg);
-	}
+    public boolean insert(Object arg) {
+        return state.insert(this, arg);
+    }
 
     /**
      * Returns the first item in the queue
@@ -58,9 +58,9 @@ public class Queue implements QueueContext {
      * @return the first item in the queue
      */
 
-	public Object  getFirst() {
-		return state.getFirst(this);
-	}
+    public Object  getFirst() {
+        return state.getFirst(this);
+    }
 
     /**
      * Tries to remove an object from the queue. Returns true if successful,
@@ -69,9 +69,9 @@ public class Queue implements QueueContext {
      * @return true if deletion was successful, false otherwise.
      */
 
-	public boolean removeFirst() {		// Removes the first element from the queue
-		return state.removeFirst(this);
-	}
+    public boolean removeFirst() {		// Removes the first element from the queue
+        return state.removeFirst(this);
+    }
 
     /**
      * Sets the state of the context to the arguments state.
@@ -79,7 +79,7 @@ public class Queue implements QueueContext {
      * @param state the new state for the context object.
      */
 
-	public void setState(QueueState state) {
-		this.state = state;
-	}
+    public void setState(QueueState state) {
+        this.state = state;
+    }
 }

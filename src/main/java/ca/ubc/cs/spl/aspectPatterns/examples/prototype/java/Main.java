@@ -88,13 +88,13 @@ public class Main {
             System.out.println(copyB1);
 
             System.out.println("Now prototype 1 is changed. Here are prototype 1 and its former copy:");
-			originalA.setText("  This is Prototype 1 (changed)");
+            originalA.setText("  This is Prototype 1 (changed)");
             System.out.println(originalA);
             System.out.println(copyA1);
 
             System.out.println("This is a clone of the changed prototype 1 and a changed copy of prototype 2:");
-			copyA2 = (StringPrototypeA) originalA.clone();
-			copyB1.setText("  This is a changed copy of prototype 2");
+            copyA2 = (StringPrototypeA) originalA.clone();
+            copyB1.setText("  This is a changed copy of prototype 2");
             System.out.println(copyA2);
             System.out.println(copyB1);
 

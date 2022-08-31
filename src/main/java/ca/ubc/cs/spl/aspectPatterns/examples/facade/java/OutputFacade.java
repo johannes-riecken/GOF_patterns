@@ -54,26 +54,26 @@ public class OutputFacade {
      */
 
     public void printFancy(String s) {
-		printDecoration();
+        printDecoration();
 
         RegularScreen.print(StringTransformer.transformToUpper(s+" (uppercase)"));
         RegularScreen.newline();
 
-		printDecoration();
+        printDecoration();
 
         RegularScreen.print(StringTransformer.transformToLower(s+" (lowercase)"));
         RegularScreen.newline();
 
-		printDecoration();
+        printDecoration();
     }
 
-	/**
-	 * Prints a decorator string.
-	 */
+    /**
+     * Prints a decorator string.
+     */
 
-	public void printDecoration() {
-		RegularScreen.print(Decoration.getDecoration());
-		RegularScreen.newline();
-		RegularScreen.newline();
-	}
+    public void printDecoration() {
+        RegularScreen.print(Decoration.getDecoration());
+        RegularScreen.newline();
+        RegularScreen.newline();
+    }
 }

@@ -40,7 +40,7 @@ public class WhitespaceFlyweight implements PrintableFlyweight {
      * The character this flyweight represents
      */
 
-	private final char c;
+    private final char c;
 
     /**
      * Creates a new flyweight and sets it to represent a particular
@@ -49,18 +49,18 @@ public class WhitespaceFlyweight implements PrintableFlyweight {
      * @param c the character to represent
      */
 
-	public WhitespaceFlyweight(char c) {
-		this.c = c;
-	}
+    public WhitespaceFlyweight(char c) {
+        this.c = c;
+    }
 
-	/**
-	 * Prints the stored character.
-	 *
-	 * @param uppercase whether the character should be printed in
-	 * uppercase
-	 */
+    /**
+     * Prints the stored character.
+     *
+     * @param uppercase whether the character should be printed in
+     * uppercase
+     */
 
-	public void print(boolean uppercase) {
-		System.out.print(uppercase ? Character.toUpperCase(c) : c);
-	}
+    public void print(boolean uppercase) {
+        System.out.print(uppercase ? Character.toUpperCase(c) : c);
+    }
 }

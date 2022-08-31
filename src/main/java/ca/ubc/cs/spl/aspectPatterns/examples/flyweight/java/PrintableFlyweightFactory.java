@@ -41,7 +41,7 @@ public class PrintableFlyweightFactory {
      * stores the existing flyweights by character they represent
      */
 
-	private final Hashtable printables = new Hashtable();
+    private final Hashtable printables = new Hashtable();
 
     /**
      * Returns the flyweight representing the argument character.
@@ -52,21 +52,21 @@ public class PrintableFlyweightFactory {
      * @return the <i>Flyweight</i> representing the argument character
      */
 
-	public PrintableFlyweight getPrintableFlyweight(char c) {
+    public PrintableFlyweight getPrintableFlyweight(char c) {
 
-		Character ch = new Character(c);
+        Character ch = new Character(c);
 
-		if (printables.containsKey(ch)) {
-			return (PrintableFlyweight) printables.get(ch);
-		} else {
-			PrintableFlyweight flyweight = null;
-			if (Character.isWhitespace(c)) {
-				flyweight = new WhitespaceFlyweight(c);
-			} else {
-				flyweight = new CharacterFlyweight(c);
-			}
-			printables.put(ch, flyweight);
-			return flyweight;
-		}
-	}
+        if (printables.containsKey(ch)) {
+            return (PrintableFlyweight) printables.get(ch);
+        } else {
+            PrintableFlyweight flyweight = null;
+            if (Character.isWhitespace(c)) {
+                flyweight = new WhitespaceFlyweight(c);
+            } else {
+                flyweight = new CharacterFlyweight(c);
+            }
+            printables.put(ch, flyweight);
+            return flyweight;
+        }
+    }
 }

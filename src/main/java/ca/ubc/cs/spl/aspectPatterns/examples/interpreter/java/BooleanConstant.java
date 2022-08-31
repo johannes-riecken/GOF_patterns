@@ -36,7 +36,7 @@ public class BooleanConstant implements BooleanExpression {
      * the value of this constant
      */
 
-	protected boolean value;
+    protected boolean value;
 
     /**
      * Creates a new constant with the given value
@@ -44,9 +44,9 @@ public class BooleanConstant implements BooleanExpression {
      * @param value the value this constant should represent
      */
 
-	public BooleanConstant(boolean value) {
-		this.value = value;
-	}
+    public BooleanConstant(boolean value) {
+        this.value = value;
+    }
 
     /**
      * Evaluates this <i>Expression</i> in the given <i>Context</i>.
@@ -55,9 +55,9 @@ public class BooleanConstant implements BooleanExpression {
      * @return the boolean value of the <i>Expression</i>
      */
 
-	public boolean evaluate(VariableContext c) {
-		return value;
-	}
+    public boolean evaluate(VariableContext c) {
+        return value;
+    }
 
     /**
      * Replaces a variable with an <i>Expression</i>.
@@ -68,9 +68,9 @@ public class BooleanConstant implements BooleanExpression {
      * @return the unchanged constant
      */
 
-	public BooleanExpression replace(String name, BooleanExpression exp) {
-		return this;
-	}
+    public BooleanExpression replace(String name, BooleanExpression exp) {
+        return this;
+    }
 
     /**
      * Copies this <i>Expression</i>
@@ -78,7 +78,7 @@ public class BooleanConstant implements BooleanExpression {
      * @return the copied <i>Expression</i>
      */
 
-	public BooleanExpression copy() {
-		return new BooleanConstant(value);
-	}
+    public BooleanExpression copy() {
+        return new BooleanConstant(value);
+    }
 }

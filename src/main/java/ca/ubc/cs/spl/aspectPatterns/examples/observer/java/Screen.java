@@ -69,33 +69,33 @@ public class Screen implements ChangeSubject, ChangeObserver {
      */
 
     public void display (String s) {
-	    System.out.println(name + ": " + s);
-	    notifyObservers();
+        System.out.println(name + ": " + s);
+        notifyObservers();
     }
 
-	/**
-	 * Attaches an <i>Observer</i> to this <i>Subject</i>.
-	 *
-	 * @param o the <i>Observer</i> to attach
-	 */
+    /**
+     * Attaches an <i>Observer</i> to this <i>Subject</i>.
+     *
+     * @param o the <i>Observer</i> to attach
+     */
 
     public void addObserver(ChangeObserver o) {
         this.observers.add(o);
     }
 
-	/**
-	 * Detaches an <i>Observer</i> from this <i>Subject</i>.
-	 *
-	 * @param o the <i>Observer</i> to detach
-	 */
+    /**
+     * Detaches an <i>Observer</i> from this <i>Subject</i>.
+     *
+     * @param o the <i>Observer</i> to detach
+     */
 
     public void removeObserver(ChangeObserver o) {
         this.observers.remove(o);
     }
 
-	/**
-	 * Notifies all <i>Observer</i>s.
-	 */
+    /**
+     * Notifies all <i>Observer</i>s.
+     */
 
     public void notifyObservers() {
         for (Iterator e = observers.iterator() ; e.hasNext() ;) {
@@ -103,15 +103,15 @@ public class Screen implements ChangeSubject, ChangeObserver {
         }
     }
 
-	/**
-	 * Updates an <i>Observer</i>. Uses the <i>push</i> strategy (i.e. the
-	 * subject triggering the update passes itself as an argument).
-	 *
-	 * This particular method prints a message showing what object caused
-	 * the update
-	 *
-	 * @param s the <i>Subject</i> triggering the update
-	 */
+    /**
+     * Updates an <i>Observer</i>. Uses the <i>push</i> strategy (i.e. the
+     * subject triggering the update passes itself as an argument).
+     *
+     * This particular method prints a message showing what object caused
+     * the update
+     *
+     * @param s the <i>Subject</i> triggering the update
+     */
 
     public void refresh(ChangeSubject s) {
     	String subjectTypeName = s.getClass().getName();

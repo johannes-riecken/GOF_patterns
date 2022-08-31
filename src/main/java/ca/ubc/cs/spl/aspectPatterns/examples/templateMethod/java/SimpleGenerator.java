@@ -40,9 +40,9 @@ public class SimpleGenerator extends DecoratedStringGenerator {
      * @return the passed string
      */
 
-	public String prepare  (String s) {
-		return s;
-	}
+    public String prepare  (String s) {
+        return s;
+    }
 
     /**
      * Filters a string. Does nothing.
@@ -51,9 +51,9 @@ public class SimpleGenerator extends DecoratedStringGenerator {
      * @return the passed string
      */
 
-	public String filter   (String s) {
-		return s;
-	}
+    public String filter   (String s) {
+        return s;
+    }
 
     /**
      * Finalizes a string by adding a period to it.
@@ -62,7 +62,7 @@ public class SimpleGenerator extends DecoratedStringGenerator {
      * @return the finalized string
      */
 
-	public String finalize (String s) {
-		return s+".";
-	}
+    public String finalize (String s) {
+        return s+".";
+    }
 }

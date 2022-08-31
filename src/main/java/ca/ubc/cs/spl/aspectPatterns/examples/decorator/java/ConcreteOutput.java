@@ -39,7 +39,7 @@ public class ConcreteOutput implements Output {
      * @param s the string to be printed.
      */
 
-	public void print(String s) {
-		System.out.print(s);
-	}
+    public void print(String s) {
+        System.out.print(s);
+    }
 }

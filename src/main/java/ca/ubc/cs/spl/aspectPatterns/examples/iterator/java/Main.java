@@ -59,11 +59,11 @@ public class Main {
      * @param iter the iterator which elements are to be printed
      */
 
-	private static void print(Iterator iter) {
-		while(iter.hasNext()) {
-			System.out.println(iter.next());
-		}
-	}
+    private static void print(Iterator iter) {
+        while(iter.hasNext()) {
+            System.out.println(iter.next());
+        }
+    }
 
     /**
      * Implements the driver for the Iterator design pattern example.<p>
@@ -75,23 +75,23 @@ public class Main {
      * @param args command line paramters, unused
      */
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		OpenList openList = new OpenList();
-		openList.append(new Integer(1));
-		openList.append(new Integer(2));
-		openList.append(new Integer(3));
-		openList.append(new Integer(4));
-		openList.append(new Integer(5));
+        OpenList openList = new OpenList();
+        openList.append(new Integer(1));
+        openList.append(new Integer(2));
+        openList.append(new Integer(3));
+        openList.append(new Integer(4));
+        openList.append(new Integer(5));
 
-		System.out.println("List created, containing int objects 1, 2, 3, 4, 5.");
+        System.out.println("List created, containing int objects 1, 2, 3, 4, 5.");
 
-		Iterator iter = openList.createReverseIterator();
+        Iterator iter = openList.createReverseIterator();
 
-		System.out.println("Using ReverseIterator to print list elements in reverse order...");
+        System.out.println("Using ReverseIterator to print list elements in reverse order...");
 
-		print(iter);
+        print(iter);
 
-		System.out.println("done.");
-	}
+        System.out.println("done.");
+    }
 }

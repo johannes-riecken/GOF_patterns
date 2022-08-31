@@ -40,9 +40,9 @@ public class Label extends JLabel implements GUIMediator {
      * @param s the tag for the new <code>Label</code> object
      */
 
-	public Label(String s) {
-		super(s);
-	}
+    public Label(String s) {
+        super(s);
+    }
 
     /**
      * Handles the event that a <i>colleague</i> chanbged.
@@ -50,14 +50,14 @@ public class Label extends JLabel implements GUIMediator {
      * @param colleague the <i>Colleague</i> that caused the notification
      */
 
-	public void colleagueChanged(GUIColleague colleague) {
-	    Button button = (Button) colleague;
+    public void colleagueChanged(GUIColleague colleague) {
+        Button button = (Button) colleague;
 
-		if (button == Main.button1) {
-			this.setText("Button1 clicked");
-		} else if (button == Main.button2) {
-			this.setText("Button2 clicked");
-		}
-		button.setText("(Done)");
-	}
+        if (button == Main.button1) {
+            this.setText("Button1 clicked");
+        } else if (button == Main.button2) {
+            this.setText("Button2 clicked");
+        }
+        button.setText("(Done)");
+    }
 }

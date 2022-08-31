@@ -41,9 +41,9 @@ public class StarDecorator extends OutputDecorator {
      * @param s the string to be decorated.
      */
 
-	public void print(String s) {
-		outputComponent.print(" *** " + s + " *** ");
-	}
+    public void print(String s) {
+        outputComponent.print(" *** " + s + " *** ");
+    }
 
     /**
      * Creates a StarDecorator for the given output component
@@ -51,9 +51,9 @@ public class StarDecorator extends OutputDecorator {
      * @param output the <i>Component</i> to decorate.
      */
 
-	public StarDecorator(Output output) {
-		super(output);
-	}
+    public StarDecorator(Output output) {
+        super(output);
+    }
 
 
 }

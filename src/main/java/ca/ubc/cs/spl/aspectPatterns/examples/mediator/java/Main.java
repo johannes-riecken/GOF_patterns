@@ -70,24 +70,24 @@ public class Main {
      * calling button.
      */
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
 
         frame.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {System.exit(0);}
-		});
+            public void windowClosing(WindowEvent e) {System.exit(0);}
+        });
 
-		JPanel panel = new JPanel();
+        JPanel panel = new JPanel();
 
-		panel.add(label);
-		panel.add(button1);
-		panel.add(button2);
+        panel.add(label);
+        panel.add(button1);
+        panel.add(button2);
 
-		frame.getContentPane().add(panel);
-		frame.pack();
-		frame.setVisible(true);
+        frame.getContentPane().add(panel);
+        frame.pack();
+        frame.setVisible(true);
 
-	    button1.setMediator(label);
-	    button2.setMediator(label);
-	}
+        button1.setMediator(label);
+        button2.setMediator(label);
+    }
 }

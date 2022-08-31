@@ -40,30 +40,30 @@ public class ReverseIterator implements Iterator {
      * the positition of the current element
      */
 
-	protected int current;
+    protected int current;
 
-	/**
-	 * the list this iterator operates on
-	 */
+    /**
+     * the list this iterator operates on
+     */
 
-	protected SimpleList list;
+    protected SimpleList list;
 
-	/**
-	 * Returns true if the iteration has more elements.
-	 *
-	 * @return true if the iteration has more elements
-	 */
+    /**
+     * Returns true if the iteration has more elements.
+     *
+     * @return true if the iteration has more elements
+     */
 
-	public boolean hasNext() {
-		return (current > 0);
-	}
+    public boolean hasNext() {
+        return (current > 0);
+    }
 
-	/**
-	 * This opional method is not implemented for this iterator.
-	 */
+    /**
+     * This opional method is not implemented for this iterator.
+     */
 
-	public void remove() {
-	    throw new UnsupportedOperationException("remove() not supported");
+    public void remove() {
+        throw new UnsupportedOperationException("remove() not supported");
     }
 
     /**
@@ -72,23 +72,23 @@ public class ReverseIterator implements Iterator {
      * @return the next element in the iteration.
      */
 
-	public Object next() {
-		if (!hasNext()) {
-			throw new ArrayIndexOutOfBoundsException("Iterator out of Bounds");
-		} else {
+    public Object next() {
+        if (!hasNext()) {
+            throw new ArrayIndexOutOfBoundsException("Iterator out of Bounds");
+        } else {
     		return list.get(--current);
-	    }
-	}
+        }
+    }
 
-	/**
-	 * Creates a new ReverseIterator from the given list.
-	 *
-	 * @param list the list to generate an iterator from
-	 */
+    /**
+     * Creates a new ReverseIterator from the given list.
+     *
+     * @param list the list to generate an iterator from
+     */
 
-	public ReverseIterator(SimpleList list) {
-		super();
-		this.list = list;
-		current = list.count();
-	}
+    public ReverseIterator(SimpleList list) {
+        super();
+        this.list = list;
+        current = list.count();
+    }
 }

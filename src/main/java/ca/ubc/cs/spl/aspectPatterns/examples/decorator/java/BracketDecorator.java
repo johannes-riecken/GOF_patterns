@@ -40,9 +40,9 @@ public class BracketDecorator extends OutputDecorator {
      * @param s the string to be decorated.
      */
 
-	public void print(String s) {
-		outputComponent.print("["+s+"]");
-	}
+    public void print(String s) {
+        outputComponent.print("["+s+"]");
+    }
 
     /**
      * Creates a BracketDecorator for the given output component
@@ -50,7 +50,7 @@ public class BracketDecorator extends OutputDecorator {
      * @param output the component to decorate.
      */
 
-	public BracketDecorator(Output output) {
-		super(output);
-	}
+    public BracketDecorator(Output output) {
+        super(output);
+    }
 }

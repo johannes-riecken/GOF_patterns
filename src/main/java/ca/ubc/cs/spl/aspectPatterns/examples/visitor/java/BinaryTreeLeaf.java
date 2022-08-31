@@ -37,7 +37,7 @@ public class BinaryTreeLeaf implements Visitable {
      * the value stored in this leaf
      */
 
-	protected int value;
+    protected int value;
 
     /**
      * Accepts a visitor and calls <code>visitLeaf(Node) on it.
@@ -45,9 +45,9 @@ public class BinaryTreeLeaf implements Visitable {
      * @param visitor the NodeVisitor that is to be accepted.
      */
 
-	public void accept(BinaryTreeVisitor visitor) {
-		visitor.visitLeaf(this);
-	}
+    public void accept(BinaryTreeVisitor visitor) {
+        visitor.visitLeaf(this);
+    }
 
     /**
      * Creates a new <code>BinaryTreeLeaf</code> with the given value.
@@ -55,17 +55,17 @@ public class BinaryTreeLeaf implements Visitable {
      * @param value the value of the leaf
      */
 
-	public BinaryTreeLeaf(int value) {
-		this.value = value;
-	}
+    public BinaryTreeLeaf(int value) {
+        this.value = value;
+    }
 
-	/**
-	 * Accessor for the leaf's value
-	 *
-	 * @return the leaf's value
-	 */
+    /**
+     * Accessor for the leaf's value
+     *
+     * @return the leaf's value
+     */
 
-	public int getValue() {
-	    return value;
-	}
+    public int getValue() {
+        return value;
+    }
 }

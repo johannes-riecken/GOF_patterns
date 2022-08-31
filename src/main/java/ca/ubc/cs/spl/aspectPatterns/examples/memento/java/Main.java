@@ -55,21 +55,21 @@ public class Main {
      * <i>Originator</i>'s state.
      */
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		CounterMemento storedState = null;
-		Counter counter = new Counter();
+        CounterMemento storedState = null;
+        Counter counter = new Counter();
 
-		for (int i=1; i<=5; i++) {
-			counter.increment();
-			counter.show();
-			if (i==3) {
-				storedState = counter.createMemento();
-			}
-		}
+        for (int i=1; i<=5; i++) {
+            counter.increment();
+            counter.show();
+            if (i==3) {
+                storedState = counter.createMemento();
+            }
+        }
 
-		System.out.println("\nTrying to reinstate state (3)...");
-		counter.setMemento(storedState);
-		counter.show();
-	}
+        System.out.println("\nTrying to reinstate state (3)...");
+        counter.setMemento(storedState);
+        counter.show();
+    }
 }

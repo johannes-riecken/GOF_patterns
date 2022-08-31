@@ -40,8 +40,8 @@ public class ButtonCommand2 implements Command {
  * <quote>"ButtonCommand number 2 executed"</quote>.
  */
 
-	public void executeCommand() {
-		System.out.println("ButtonCommand number 2 executed");
-	}
+    public void executeCommand() {
+        System.out.println("ButtonCommand number 2 executed");
+    }
 }
 

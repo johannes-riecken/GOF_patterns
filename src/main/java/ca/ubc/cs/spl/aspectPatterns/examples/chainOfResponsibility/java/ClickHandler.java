@@ -33,5 +33,5 @@ package ca.ubc.cs.spl.aspectPatterns.examples.chainOfResponsibility.java;
  */
 
 public interface ClickHandler {
-	void handleClick(Click click);
+    void handleClick(Click click);
 }

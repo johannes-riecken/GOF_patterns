@@ -42,7 +42,7 @@ public class Button extends JButton implements ClickHandler {
      * the successor in the chain of responsibility
      */
 
-	protected ClickHandler successor;
+    protected ClickHandler successor;
 
     /**
      * Creates a <code>Button</code> with a given label and successor.
@@ -52,14 +52,14 @@ public class Button extends JButton implements ClickHandler {
      */
 
     public Button(String label, ClickHandler successor) {
-		super(label);
-		this.successor = successor;
-		this.addActionListener( new ActionListener() {
-			public void actionPerformed(ActionEvent ae) {
-				handleClick(new Click(ae));
-			}
-		});
-	}
+        super(label);
+        this.successor = successor;
+        this.addActionListener( new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                handleClick(new Click(ae));
+            }
+        });
+    }
 
     /**
      * Implements the method to handle requests as defined by the
@@ -69,17 +69,17 @@ public class Button extends JButton implements ClickHandler {
      * @see ClickHandler
      */
 
-	public void handleClick(Click click) {
-		System.out.println("Button is asked to handle the request...");
-		if (click.hasShiftMask()) {
-			System.out.println("Button handles the request.");
-		} else {
-			if (successor == null) {
-				throw new RuntimeException("request unhandled (end of chain reached)");
-			} else {
-				successor.handleClick(click);
-			}
-		}
-	}
+    public void handleClick(Click click) {
+        System.out.println("Button is asked to handle the request...");
+        if (click.hasShiftMask()) {
+            System.out.println("Button handles the request.");
+        } else {
+            if (successor == null) {
+                throw new RuntimeException("request unhandled (end of chain reached)");
+            } else {
+                successor.handleClick(click);
+            }
+        }
+    }
 }
 

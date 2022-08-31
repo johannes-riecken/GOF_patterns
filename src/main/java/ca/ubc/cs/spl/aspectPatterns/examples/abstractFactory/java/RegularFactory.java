@@ -37,26 +37,26 @@ import javax.swing.JButton;
 
 public class RegularFactory implements ComponentFactory {
 
-	/**
-	 * Factroy method to create regular <code>JLabel</code> objects.
-	 *
-	 * @return the regular <code>JLabel</code>
-	 */
+    /**
+     * Factroy method to create regular <code>JLabel</code> objects.
+     *
+     * @return the regular <code>JLabel</code>
+     */
 
-	public JLabel createLabel() {
-		return new JLabel("This Label was created by " +getName());
-	}
+    public JLabel createLabel() {
+        return new JLabel("This Label was created by " +getName());
+    }
 
-	/**
-	 * Factory method to create regular <code>JButton</code> objects.
-	 *
-	 * @param  the label for the new <code>JButton</code>
-	 * @return the regular <code>JButton</code>
-	 */
+    /**
+     * Factory method to create regular <code>JButton</code> objects.
+     *
+     * @param  the label for the new <code>JButton</code>
+     * @return the regular <code>JButton</code>
+     */
 
-	public JButton createButton(String label) {
-		return new JButton(label);
-	}
+    public JButton createButton(String label) {
+        return new JButton(label);
+    }
     /**
      * Returns the name of the factory.
      *
@@ -64,7 +64,7 @@ public class RegularFactory implements ComponentFactory {
      */
 
  	public String getName() {
-		return ("Regular Factory");
-	}
+        return ("Regular Factory");
+    }
 
 }

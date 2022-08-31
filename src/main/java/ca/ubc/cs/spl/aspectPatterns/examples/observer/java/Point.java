@@ -66,7 +66,7 @@ public class Point implements ChangeSubject {
 
     public Point(int x, int y, Color color) {
     	this.x = x;
-	    this.y = y;
+        this.y = y;
     	this.color=color;
     	this.observers = new HashSet();
     }
@@ -133,29 +133,29 @@ public class Point implements ChangeSubject {
     }
 
 
-	/**
-	 * Attaches an <i>Observer</i> to this <i>Subject</i>.
-	 *
-	 * @param o the <i>Observer</i> to attach
-	 */
+    /**
+     * Attaches an <i>Observer</i> to this <i>Subject</i>.
+     *
+     * @param o the <i>Observer</i> to attach
+     */
 
     public void addObserver(ChangeObserver o) {
         this.observers.add(o);
     }
 
-	/**
-	 * Detaches an <i>Observer</i> from this <i>Subject</i>.
-	 *
-	 * @param o the <i>Observer</i> to detach
-	 */
+    /**
+     * Detaches an <i>Observer</i> from this <i>Subject</i>.
+     *
+     * @param o the <i>Observer</i> to detach
+     */
 
     public void removeObserver(ChangeObserver o) {
         this.observers.remove(o);
     }
 
-	/**
-	 * Notifies all <i>Observer</i>s.
-	 */
+    /**
+     * Notifies all <i>Observer</i>s.
+     */
 
     public void notifyObservers() {
         for (Iterator e = observers.iterator() ; e.hasNext() ;) {

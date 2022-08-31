@@ -40,13 +40,13 @@ public class Directory implements FileSystemComponent {
      * stores the children for this Directory (files and subdirectories)
      */
 
-	protected LinkedList children = new LinkedList();		// Component interface
+    protected LinkedList children = new LinkedList();		// Component interface
 
     /**
      * stores the name of this Directory
      */
 
-	protected String name;
+    protected String name;
 
     /**
      * Creates a new Directory with a given name
@@ -54,18 +54,18 @@ public class Directory implements FileSystemComponent {
      * @param name the name for the new Directory object
      */
 
-	public Directory(String name) {
-		this.name = name;
-	}
+    public Directory(String name) {
+        this.name = name;
+    }
 
     /**
      * Overwrites the <code>toString()</code> method from <code>Object</code>
      * to print information about this Directory
      */
 
-	public String toString() {
-		return ("Directory: "+name);
-	}
+    public String toString() {
+        return ("Directory: "+name);
+    }
 
 
     /**
@@ -74,18 +74,18 @@ public class Directory implements FileSystemComponent {
      * @param component the child to add
      */
 
-	public void	add(FileSystemComponent component) {
-		this.children.add(component);
-	}
+    public void	add(FileSystemComponent component) {
+        this.children.add(component);
+    }
 
     /**
      * Removes a child from the component
      *
      * @param component the child to remove
      */
-	public void remove(FileSystemComponent component) {
-		this.children.remove(component);
-	}
+    public void remove(FileSystemComponent component) {
+        this.children.remove(component);
+    }
 
     /**
      * Returns a child of the Directory at the given position
@@ -93,9 +93,9 @@ public class Directory implements FileSystemComponent {
      * @param index the position of the child
      */
 
-	public FileSystemComponent getChild(int index) {
-		return (FileSystemComponent) children.get(index);
-	}
+    public FileSystemComponent getChild(int index) {
+        return (FileSystemComponent) children.get(index);
+    }
 
     /**
      * Returns the number of chilren this Directory has
@@ -103,17 +103,17 @@ public class Directory implements FileSystemComponent {
      * @returns the number of children of this Directory
      */
 
-	public int getChildCount() {
-		return children.size();
-	}
+    public int getChildCount() {
+        return children.size();
+    }
 
-	/**
-	 * Returns the size of this Directory. For simplicity, we define that only
-	 * files have a tangible size, so this method returns 0.
-	 *
-	 * @return the size of the component (on disk)
-	 */
-	public int getSize() {
-		return 0;
-	}
+    /**
+     * Returns the size of this Directory. For simplicity, we define that only
+     * files have a tangible size, so this method returns 0.
+     *
+     * @return the size of the component (on disk)
+     */
+    public int getSize() {
+        return 0;
+    }
 }
