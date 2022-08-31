@@ -57,6 +57,7 @@ public class SummationVisitor implements BinaryTreeVisitor {
      * @param node the leaf
      */
 
+    @Override
     public void visitLeaf(Visitable node) {
         BinaryTreeLeaf leaf = (BinaryTreeLeaf) node;
         sum += leaf.getValue();

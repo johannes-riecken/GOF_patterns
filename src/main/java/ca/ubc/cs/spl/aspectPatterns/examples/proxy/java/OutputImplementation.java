@@ -61,6 +61,7 @@ public class OutputImplementation implements OutputSubject {
      * @param s the string to print
      */
 
+    @Override
     public void unsafeRequest(String s) {
         System.out.println("[RealSubject.unsafeRequest()]: "+s);
     }

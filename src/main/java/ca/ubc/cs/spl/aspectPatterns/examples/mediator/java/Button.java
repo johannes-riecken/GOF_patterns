@@ -65,6 +65,7 @@ public class Button extends JButton implements GUIColleague {
      * @param mediator the new mediator
      */
 
+    @Override
     public void setMediator(GUIMediator mediator) {
         this.mediator = mediator;
     }

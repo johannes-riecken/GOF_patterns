@@ -68,6 +68,7 @@ public class FancyGenerator extends DecoratedStringGenerator {
      * @return the finalized string
      */
 
+    @Override
     public String finalize (String s) {
         return (s+".\n(all consonants capitalized)");
     }

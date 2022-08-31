@@ -76,6 +76,7 @@ public class XMLCreator extends Creator {
      * a default implementation.
      */
 
+    @Override
     public String getRepresentation() {
         if (attribute != null) {
             representation += ("</" + attribute + ">\n");

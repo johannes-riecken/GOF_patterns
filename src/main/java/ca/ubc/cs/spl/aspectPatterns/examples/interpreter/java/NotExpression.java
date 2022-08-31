@@ -79,6 +79,7 @@ public class NotExpression implements BooleanExpression {
      * @returns the copied <i>Expression</i>
      */
 
+    @Override
     public BooleanExpression copy() {
         return new NotExpression(exp.copy());
     }

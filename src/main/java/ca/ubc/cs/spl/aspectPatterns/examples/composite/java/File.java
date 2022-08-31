@@ -114,6 +114,7 @@ public class File implements FileSystemComponent {
      *
      * @return the size of this File (on disk)
      */
+    @Override
     public int getSize() {
         return size;
     }

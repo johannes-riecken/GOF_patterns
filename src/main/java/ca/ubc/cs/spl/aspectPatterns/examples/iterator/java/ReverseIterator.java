@@ -72,6 +72,7 @@ public class ReverseIterator implements Iterator {
      * @return the next element in the iteration.
      */
 
+    @Override
     public Object next() {
         if (!hasNext()) {
             throw new ArrayIndexOutOfBoundsException("Iterator out of Bounds");

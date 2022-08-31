@@ -86,6 +86,7 @@ public class RequestBlocker implements OutputSubject {
      * @param s the string to print
      */
 
+    @Override
     public void unsafeRequest(String s) {
         realSubject.unsafeRequest(s);
         System.out.println("[RequestBlocker:] " + s + " blocked.");

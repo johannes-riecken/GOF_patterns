@@ -86,6 +86,7 @@ public class OrExpression implements BooleanExpression {
      * @returns the copied <i>Expression</i>
      */
 
+    @Override
     public BooleanExpression copy() {
         return new OrExpression(expression1.copy(), expression2.copy());
     }

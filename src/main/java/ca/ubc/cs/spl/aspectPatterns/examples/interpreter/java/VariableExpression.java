@@ -93,6 +93,7 @@ public class VariableExpression implements BooleanExpression {
      * @return the copied <i>Expression</i>
      */
 
+    @Override
     public BooleanExpression copy() {
         return new VariableExpression(name);
     }

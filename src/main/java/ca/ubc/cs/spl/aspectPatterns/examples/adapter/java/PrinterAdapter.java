@@ -67,6 +67,7 @@ public class PrinterAdapter implements Writer {
      * @see SystemOutPrinter#printToSystemOut(String)
      */
 
+    @Override
     public void write(String s) {
         adaptee.printToSystemOut(s);
     }

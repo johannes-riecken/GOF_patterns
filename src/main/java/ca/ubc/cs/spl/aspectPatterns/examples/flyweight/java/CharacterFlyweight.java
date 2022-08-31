@@ -59,6 +59,7 @@ public class CharacterFlyweight implements PrintableFlyweight {
      * uppercase
      */
 
+    @Override
     public void print(boolean uppercase) {
         System.out.print(uppercase ? Character.toUpperCase(c) : c);
     }

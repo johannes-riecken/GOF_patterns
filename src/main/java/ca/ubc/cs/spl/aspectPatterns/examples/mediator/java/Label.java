@@ -50,6 +50,7 @@ public class Label extends JLabel implements GUIMediator {
      * @param colleague the <i>Colleague</i> that caused the notification
      */
 
+    @Override
     public void colleagueChanged(GUIColleague colleague) {
         Button button = (Button) colleague;
 

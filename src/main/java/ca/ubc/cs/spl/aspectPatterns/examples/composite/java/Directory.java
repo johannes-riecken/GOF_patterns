@@ -113,6 +113,7 @@ public class Directory implements FileSystemComponent {
      *
      * @return the size of the component (on disk)
      */
+    @Override
     public int getSize() {
         return 0;
     }

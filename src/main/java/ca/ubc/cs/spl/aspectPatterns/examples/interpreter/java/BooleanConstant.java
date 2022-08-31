@@ -78,6 +78,7 @@ public class BooleanConstant implements BooleanExpression {
      * @return the copied <i>Expression</i>
      */
 
+    @Override
     public BooleanExpression copy() {
         return new BooleanConstant(value);
     }

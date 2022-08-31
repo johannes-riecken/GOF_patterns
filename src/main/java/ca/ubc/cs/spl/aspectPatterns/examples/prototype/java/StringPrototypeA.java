@@ -67,6 +67,7 @@ public class StringPrototypeA implements Cloneable {
      * @returns a string representation of this object.
      */
 
+    @Override
     public String toString() {
         return "StringPrototypeA: "+ text;
     }

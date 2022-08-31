@@ -65,6 +65,7 @@ public class Panel extends JPanel implements ClickHandler {
      * @see ClickHandler
      */
 
+    @Override
     public void handleClick(Click click) {
         System.out.println("Panel is asked to handle the request...");
         if (click.hasCtrlMask()) {

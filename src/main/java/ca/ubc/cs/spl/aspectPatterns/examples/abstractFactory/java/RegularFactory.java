@@ -54,6 +54,7 @@ public class RegularFactory implements ComponentFactory {
      * @return the regular <code>JButton</code>
      */
 
+    @Override
     public JButton createButton(String label) {
         return new JButton(label);
     }

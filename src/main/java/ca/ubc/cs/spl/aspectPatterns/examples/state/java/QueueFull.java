@@ -97,6 +97,7 @@ public class QueueFull implements QueueState {
      * @return true if deletion was successful, false otherwise.
      */
 
+    @Override
     public boolean removeFirst(QueueContext context){
         QueueState nextState = new QueueNormal(items, first, first);
         context.setState(nextState);

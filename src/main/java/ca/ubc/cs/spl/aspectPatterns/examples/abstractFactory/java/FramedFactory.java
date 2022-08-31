@@ -63,6 +63,7 @@ public class FramedFactory implements ComponentFactory {
      * @return the framed <code>JButton</code>
      */
 
+     @Override
      public JButton createButton(String label) {
         JButton button = new JButton(label);
         Border raisedbevel = BorderFactory.createRaisedBevelBorder();

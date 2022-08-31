@@ -60,6 +60,7 @@ public class TraversalVisitor implements BinaryTreeVisitor {
      * @param node the leaf
      */
 
+    @Override
     public void visitLeaf(Visitable node) {
         BinaryTreeLeaf leaf = (BinaryTreeLeaf) node;
         result += leaf.getValue();

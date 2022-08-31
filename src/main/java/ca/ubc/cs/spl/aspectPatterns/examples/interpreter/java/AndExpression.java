@@ -87,6 +87,7 @@ public class AndExpression implements BooleanExpression {
      * @returns the copied <i>Expression</i>
      */
 
+    @Override
     public BooleanExpression copy() {
         return new AndExpression(expression1.copy(), expression2.copy());
     }

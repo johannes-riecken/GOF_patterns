@@ -149,6 +149,7 @@ public class Point implements ChangeSubject {
      * @param o the <i>Observer</i> to detach
      */
 
+    @Override
     public void removeObserver(ChangeObserver o) {
         this.observers.remove(o);
     }

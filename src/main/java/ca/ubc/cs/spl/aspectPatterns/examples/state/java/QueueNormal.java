@@ -119,6 +119,7 @@ public class QueueNormal implements QueueState {
      * @return true if deletion was successful, false otherwise.
      */
 
+    @Override
     public boolean removeFirst(QueueContext context){
         first = (first + 1) % items.length;
         if (first == last) {

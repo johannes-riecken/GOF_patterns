@@ -54,6 +54,7 @@ public class LabelCreator extends GUIComponentCreator {
      * @returns the title for the GUI frame
      */
 
+    @Override
     public String getTitle() {
         return "Example 2: A JLabel";
     }

@@ -40,6 +40,7 @@ public class BracketDecorator extends OutputDecorator {
      * @param s the string to be decorated.
      */
 
+    @Override
     public void print(String s) {
         outputComponent.print("["+s+"]");
     }

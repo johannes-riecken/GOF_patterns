@@ -95,6 +95,7 @@ public class Display extends JFrame  {
             this.display = display;
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             display.setVisible(false);
         }

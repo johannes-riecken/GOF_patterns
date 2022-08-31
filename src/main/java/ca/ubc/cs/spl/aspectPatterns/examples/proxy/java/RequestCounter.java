@@ -95,6 +95,7 @@ public class RequestCounter implements OutputSubject {
      * @param s the string to print
      */
 
+    @Override
     public void unsafeRequest(String s) {
         realSubject.unsafeRequest(s);
         System.out.println("[RequestCounter:] Not interested in unsafe requests," +

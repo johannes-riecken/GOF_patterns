@@ -60,6 +60,7 @@ public class TextCreator extends Creator {
      * @param newValue the value to process
      */
 
+    @Override
     public void processValue(String newValue) {
         representation += (newValue + ".\n");
     }

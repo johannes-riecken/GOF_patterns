@@ -51,6 +51,7 @@ public class BinaryTreeNode implements Visitable {
      * @param visitor the NodeVisitor that is to be accepted.
      */
 
+    @Override
     public void accept(BinaryTreeVisitor visitor) {
         visitor.visitNode(this);
     }

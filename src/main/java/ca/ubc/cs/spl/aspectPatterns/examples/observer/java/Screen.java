@@ -113,6 +113,7 @@ public class Screen implements ChangeSubject, ChangeObserver {
      * @param s the <i>Subject</i> triggering the update
      */
 
+    @Override
     public void refresh(ChangeSubject s) {
     	String subjectTypeName = s.getClass().getName();
     	subjectTypeName = subjectTypeName.substring(

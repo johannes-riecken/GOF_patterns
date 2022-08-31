@@ -76,6 +76,7 @@ public class QueueEmpty implements QueueState {
      * @return false.
      */
 
+    @Override
     public boolean removeFirst(QueueContext context){
         return false;
     }

@@ -48,6 +48,7 @@ public abstract class OutputDecorator implements Output {
      * @param s the string to be printed.
      */
 
+    @Override
     public void print(String s) {
         outputComponent.print(s);
     }

@@ -84,6 +84,7 @@ public abstract class GUIComponentCreator {
         JFrame frame = new JFrame(getTitle());
 
    		frame.addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {System.exit(0);}
         });
 

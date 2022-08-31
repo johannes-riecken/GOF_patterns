@@ -56,6 +56,7 @@ public class StarImplementation implements ScreenImplementation {
          * @param text the text to print
          */
 
+        @Override
         public void printText(String text) {
             System.out.print(text);
         }

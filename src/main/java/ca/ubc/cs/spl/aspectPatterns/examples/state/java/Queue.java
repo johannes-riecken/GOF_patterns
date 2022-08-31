@@ -79,6 +79,7 @@ public class Queue implements QueueContext {
      * @param state the new state for the context object.
      */
 
+    @Override
     public void setState(QueueState state) {
         this.state = state;
     }

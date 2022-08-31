@@ -75,6 +75,7 @@ public class Frame extends JFrame implements ClickHandler {
      * @see ClickHandler
      */
 
+    @Override
     public void handleClick(Click click) {
         System.out.println("Frame is asked to handle the request...");
         if (click.hasAltMask()) {
